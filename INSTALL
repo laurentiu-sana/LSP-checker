@@ -1,0 +1,18 @@
+= Liskov substitution principle (LSP) checker =
+
+== Install JPF ==
+
+* Install Java PathFinder
+  hg clone http://babelfish.arc.nasa.gov/hg/jpf/jpf-core
+
+* Install the symbolic execution engine
+  hg clone http://babelfish.arc.nasa.gov/hg/jpf/jpf-symbc
+
+* Apply patches
+  # jpf-core.patch
+  # jpf-symbc.patch
+
+  You have to adapt paths defined in the patch files, because the LSP checker
+listener is attached to the Symbolic JPF. Using the listener, we intercept
+various calls done by the SUT and decide about its properties.
+

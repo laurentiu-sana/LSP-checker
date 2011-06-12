@@ -1,0 +1,273 @@
+diff -r 342f861c04fd build.xml
+--- a/build.xml	Wed May 18 13:35:36 2011 -0700
++++ b/build.xml	Sun Jun 12 10:41:22 2011 +0200
+@@ -52,7 +52,6 @@
+ 
+     <!-- add in what we need from the core -->
+     <pathelement path="${jpf-core.native_classpath}"/>
+-
+   </path>
+ 
+   <!-- init: common initialization -->
+diff -r 342f861c04fd jpf.properties
+--- a/jpf.properties	Wed May 18 13:35:36 2011 -0700
++++ b/jpf.properties	Sun Jun 12 10:41:22 2011 +0200
+@@ -23,13 +23,21 @@
+   ${jpf-symbc}/lib/org.sat4j.core.jar;\
+   ${jpf-symbc}/lib/org.sat4j.pb.jar;\
+   ${jpf-symbc}/lib/aima-core.jar;\
+-  ${jpf-symbc}/lib/yicesapijava.jar
++  ${jpf-symbc}/lib/yicesapijava.jar;\
++  /home/sana/Desktop/Diploma/workspace/SymbolicExecutor/build/classes;\
++  /home/sana/Desktop/Diploma/workspace/SymbolicExecutor/lib/log4j-1.2.15.jar;
++
+ 
+ jpf-symbc.classpath=\
+-  ${jpf-symbc}/build/jpf-symbc-classes.jar
+-  
++  ${jpf-symbc}/build/jpf-symbc-classes.jar;\
++  /home/sana/Desktop/Diploma/workspace/SymbolicExecutor/build/classes;\
++  /home/sana/Desktop/Diploma/workspace/SymbolicExecutor/tests/classes;\
++  /home/sana/Desktop/Diploma/workspace/SymbolicExecutor/tests/generated_tests;\
++  /home/sana/Desktop/Diploma/workspace/SymbolicExecutor/config
++
+ jpf-symbc.test_classpath=\
+-  build/tests
++  build/tests;\
++  /home/sana/Desktop/Diploma/workspace/SymbolicExecutor/build/classes
+ 
+ 
+ ### configurations specific to the symbc project
+diff -r 342f861c04fd src/main/gov/nasa/jpf/symbc/bytecode/BytecodeUtils.java
+--- a/src/main/gov/nasa/jpf/symbc/bytecode/BytecodeUtils.java	Wed May 18 13:35:36 2011 -0700
++++ b/src/main/gov/nasa/jpf/symbc/bytecode/BytecodeUtils.java	Sun Jun 12 10:41:22 2011 +0200
+@@ -424,7 +424,6 @@
+ 
+ 			assert pc != null;
+ 
+-
+ 			if (invInst.getInvokedMethod().getAnnotation("gov.nasa.jpf.symbc.Preconditions") != null) {
+ 				ai = invInst.getInvokedMethod().getAnnotation("gov.nasa.jpf.symbc.Preconditions");
+ 				String assumeString = (String) ai.getValue("value");
+@@ -432,8 +431,6 @@
+ 				pc = (new PreCondition()).addConstraints(pc,assumeString, expressionMap);
+ 			}
+ 
+-
+-
+ 			//	should check PC for satisfiability
+ 			if (!pc.simplify()) {// not satisfiable
+ 				//System.out.println("Precondition not satisfiable");
+diff -r 342f861c04fd src/main/gov/nasa/jpf/symbc/numeric/BinaryLinearIntegerExpression.java
+--- a/src/main/gov/nasa/jpf/symbc/numeric/BinaryLinearIntegerExpression.java	Wed May 18 13:35:36 2011 -0700
++++ b/src/main/gov/nasa/jpf/symbc/numeric/BinaryLinearIntegerExpression.java	Sun Jun 12 10:41:22 2011 +0200
+@@ -60,12 +60,14 @@
+ 
+ 	public String toString ()
+ 	{
+-		return "(" + left.toString() + op.toString() + right.toString() + ")";
++		//return "(" + left.toString() + op.toString() + right.toString() + ")";
++		return "(" + op.toString() + left.toString() + " " + right.toString() + " )";
+ 	}
+ 
+ 	public String stringPC ()
+ 	{
+-		return "(" + left.stringPC() + op.toString() + right.stringPC() + ")";
++		//return "(" + left.stringPC() + op.toString() + right.stringPC() + ")";
++		return "(" + op.toString() + left.stringPC() + " " + right.stringPC() + " )";
+ 	}
+ 
+ 	public IntegerExpression getLeft() {
+diff -r 342f861c04fd src/main/gov/nasa/jpf/symbc/numeric/BinaryNonLinearIntegerExpression.java
+--- a/src/main/gov/nasa/jpf/symbc/numeric/BinaryNonLinearIntegerExpression.java	Wed May 18 13:35:36 2011 -0700
++++ b/src/main/gov/nasa/jpf/symbc/numeric/BinaryNonLinearIntegerExpression.java	Sun Jun 12 10:41:22 2011 +0200
+@@ -62,10 +62,12 @@
+     }
+ 
+ 	public String stringPC() {
+-		return "(" + left.stringPC() + op.toString() + right.stringPC() + ")";
++		//return "(" + left.stringPC() + op.toString() + right.stringPC() + ")";
++		return "(" + op.toString() + left.stringPC() + " " + right.stringPC() + " )";
+ 	}
+ 
+ 	public String toString() {
+-		return "(" + left.toString() + op.toString() + right.toString() + ")";
++		//return "(" + left.toString() + op.toString() + right.toString() + ")";
++		return "(" + op.toString() + left.toString() + " " + right.toString() + " )";
+ 	}
+ }
+diff -r 342f861c04fd src/main/gov/nasa/jpf/symbc/numeric/BinaryRealExpression.java
+--- a/src/main/gov/nasa/jpf/symbc/numeric/BinaryRealExpression.java	Wed May 18 13:35:36 2011 -0700
++++ b/src/main/gov/nasa/jpf/symbc/numeric/BinaryRealExpression.java	Sun Jun 12 10:41:22 2011 +0200
+@@ -54,12 +54,14 @@
+     }
+ 	
+ 	public String stringPC() {
+-		return "(" + left.stringPC() + op.toString() + right.stringPC() + ")";
++		//return "(" + left.stringPC() + op.toString() + right.stringPC() + ")";
++		return "(" + op.toString() + left.stringPC() + " " + right.stringPC() + " )";
+ 	}
+ 
+ 	public String toString () 
+ 	{
+-		return "(" + left.toString() + op.toString() + right.toString() + ")";
++		//return "(" + left.toString() + op.toString() + right.toString() + ")";
++		return "(" + op.toString() + left.toString() + " " + right.toString() + " )";
+ 	}
+ 
+ 	public Operator getOp() {
+diff -r 342f861c04fd src/main/gov/nasa/jpf/symbc/numeric/Constraint.java
+--- a/src/main/gov/nasa/jpf/symbc/numeric/Constraint.java	Wed May 18 13:35:36 2011 -0700
++++ b/src/main/gov/nasa/jpf/symbc/numeric/Constraint.java	Sun Jun 12 10:41:22 2011 +0200
+@@ -69,8 +69,9 @@
+   }
+ 
+   public String stringPC() {
+-    return left.stringPC() + comp.toString() + right.stringPC()
+-        + ((and == null) ? "" : " && " + and.stringPC());
++	if (and == null)
++		return "(" + comp.toString() + left.stringPC() + " " + right.stringPC() + " )";
++    return "(and (" + comp.toString() + left.stringPC() + " " + right.stringPC() + " ) " + and.stringPC() + " )";
+   }
+ 
+   public void getVarVals(Map<String,Object> varsVals) {
+@@ -111,8 +112,11 @@
+   }
+ 
+   public String toString() {
+-    return left.toString() + comp.toString() + right.toString()
+-        + ((and == null) ? "" : " &&\n" + and.toString());
++	  if (and != null)
++		  return "(and (" + comp.toString() + left.toString() + " " + right.toString() + ") " + and.toString() + " )";
++	  return "(" + comp.toString() + left.toString() + " " + right.toString() + " )";
++    //return left.toString() + comp.toString() + right.toString()
++    //    + ((and == null) ? "" : " &&\n" + and.toString());
+   }
+ 
+   public Constraint last() {
+diff -r 342f861c04fd src/main/gov/nasa/jpf/symbc/numeric/IntegerConstant.java
+--- a/src/main/gov/nasa/jpf/symbc/numeric/IntegerConstant.java	Wed May 18 13:35:36 2011 -0700
++++ b/src/main/gov/nasa/jpf/symbc/numeric/IntegerConstant.java	Sun Jun 12 10:41:22 2011 +0200
+@@ -277,11 +277,13 @@
+   }
+ 
+   public String toString () {
+-    return "CONST_" + value + "";
++    //return "CONST_" + value + "";
++    return value + "";
+   }
+ 
+   public String stringPC () {
+-    return "CONST_" + value + "";
++    //return "CONST_" + value + "";
++    return value + "";
+   }
+ 
+   public int value () {
+diff -r 342f861c04fd src/main/gov/nasa/jpf/symbc/numeric/LogicalORLinearIntegerConstraints.java
+--- a/src/main/gov/nasa/jpf/symbc/numeric/LogicalORLinearIntegerConstraints.java	Wed May 18 13:35:36 2011 -0700
++++ b/src/main/gov/nasa/jpf/symbc/numeric/LogicalORLinearIntegerConstraints.java	Sun Jun 12 10:41:22 2011 +0200
+@@ -33,6 +33,8 @@
+ 	}
+ 	
+ 	public String toString () {
++		System.err.println(this.getClass());
++		System.exit(0);
+ 		StringBuilder sb = new StringBuilder();
+ 		if (list.size() == 1) {
+ 			return list.get(0).toString();
+diff -r 342f861c04fd src/main/gov/nasa/jpf/symbc/numeric/PCChoiceGenerator.java
+--- a/src/main/gov/nasa/jpf/symbc/numeric/PCChoiceGenerator.java	Wed May 18 13:35:36 2011 -0700
++++ b/src/main/gov/nasa/jpf/symbc/numeric/PCChoiceGenerator.java	Sun Jun 12 10:41:22 2011 +0200
+@@ -54,7 +54,6 @@
+ 	// sets the PC constraints for the current choice
+ 	public void setCurrentPC(PathCondition pc) {
+ 		PC[getNextChoice()] = pc;
+-
+ 	}
+ 
+ 	// returns the PC constraints for the current choice
+diff -r 342f861c04fd src/main/gov/nasa/jpf/symbc/numeric/PathCondition.java
+--- a/src/main/gov/nasa/jpf/symbc/numeric/PathCondition.java	Wed May 18 13:35:36 2011 -0700
++++ b/src/main/gov/nasa/jpf/symbc/numeric/PathCondition.java	Sun Jun 12 10:41:22 2011 +0200
+@@ -279,12 +279,18 @@
+ 	}
+ 
+ 	public String stringPC() {
+-		return "# = " + count + ((header == null) ? "" : "\n" + header.stringPC());
++		//return "# = " + count + ((header == null) ? "" : "\n" + header.stringPC());
++		if (header == null)
++			return "";
++		return header.stringPC();
+ 	}
+ 
+ 	public String toString() {
+-		return "# = " + count + ((header == null) ? "" : "\n" + header.toString())
+-					+ "\n" + spc.toString(); // TODO: to review
++		//return "# = " + count + ((header == null) ? "" : "\n" + header.toString())
++		//			+ "\n" + spc.toString();
++		if (header == null)
++			return "";
++		return header.toString();
+ 	}
+ 
+ 	public static PathCondition getPC(MJIEnv env) {
+@@ -304,6 +310,17 @@
+ 	        return null;
+ 	    }
+ 	}
++	
++	private String m_throwContext = null;
++
++	public String getThrowContext() {
++		return m_throwContext;
++	}
++
++	public void setThrowContext(String throwsException) {
++		m_throwContext = throwsException;
++		
++	}
+ 
+ 
+ }
+diff -r 342f861c04fd src/main/gov/nasa/jpf/symbc/numeric/SymbolicConstraintsGeneral.java
+--- a/src/main/gov/nasa/jpf/symbc/numeric/SymbolicConstraintsGeneral.java	Wed May 18 13:35:36 2011 -0700
++++ b/src/main/gov/nasa/jpf/symbc/numeric/SymbolicConstraintsGeneral.java	Sun Jun 12 10:41:22 2011 +0200
+@@ -837,7 +837,10 @@
+ 
+ 			}
+ 			else
+-				throw new RuntimeException("## Error: Non Linear Integer Constraint not handled " + cRef);
++			{
++				return true;
++				//throw new RuntimeException("## Error: Non Linear Integer Constraint not handled " + cRef);
++			}
+ 
+ 			if(constraintResult == false) return false;
+ 
+diff -r 342f861c04fd src/main/gov/nasa/jpf/symbc/numeric/SymbolicInteger.java
+--- a/src/main/gov/nasa/jpf/symbc/numeric/SymbolicInteger.java	Wed May 18 13:35:36 2011 -0700
++++ b/src/main/gov/nasa/jpf/symbc/numeric/SymbolicInteger.java	Sun Jun 12 10:41:22 2011 +0200
+@@ -83,6 +83,9 @@
+ 	}
+ 
+ 	public String toString () {
++		if (true)
++			return (name != null) ? name : "INT_" + hashCode();
++		
+ 		if (!PathCondition.flagSolved) {
+ 			return (name != null) ? name : "INT_" + hashCode();
+ 
+diff -r 342f861c04fd src/main/gov/nasa/jpf/symbc/numeric/SymbolicReal.java
+--- a/src/main/gov/nasa/jpf/symbc/numeric/SymbolicReal.java	Wed May 18 13:35:36 2011 -0700
++++ b/src/main/gov/nasa/jpf/symbc/numeric/SymbolicReal.java	Sun Jun 12 10:41:22 2011 +0200
+@@ -86,6 +86,9 @@
+ 	}
+ 
+ 	public String toString () {
++		if (true)
++			return (name != null) ? name : "REAL_" + hashCode();
++		
+ 		if (!PathCondition.flagSolved) {
+ 			return (name != null) ? name : "REAL_" + hashCode();
+ 
