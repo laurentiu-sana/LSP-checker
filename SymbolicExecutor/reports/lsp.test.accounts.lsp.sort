@@ -1,0 +1,23 @@
+lsp.tests.LSPCheckerGeneratedTestACCOUNTS
+<lsp.test.accounts.AccountsTest: void test(lsp.test.accounts.IAccount,int)> scored 3.0
+<lsp.test.accounts.OrdinaryAccount: void <init>()> scored 0.0
+<lsp.test.accounts.OrdinaryAccount: void open()> scored 0.0
+<lsp.test.accounts.OrdinaryAccount: void setDeposit(int)> scored 0.0
+<lsp.test.accounts.OrdinaryAccount: void close()> scored 0.0
+<lsp.test.accounts.OrdinaryAccount: boolean isOpen()> scored 0.0
+<lsp.test.accounts.OrdinaryAccount: void mainLSPChecker(java.lang.String[])> scored 0.0
+<lsp.test.accounts.OrdinaryAccount: void <clinit>()> scored 0.0
+<lsp.test.accounts.AccountsTest: void <init>()> scored 0.0
+<lsp.test.accounts.AccountsTest: void mainLSPChecker(java.lang.String[])> scored 0.0
+<lsp.test.accounts.AccountsTest: void <clinit>()> scored 0.0
+<lsp.test.accounts.PlatinumAccount: void <init>()> scored 0.0
+<lsp.test.accounts.PlatinumAccount: void open()> scored 0.0
+<lsp.test.accounts.PlatinumAccount: void setDeposit(int)> scored 0.0
+<lsp.test.accounts.PlatinumAccount: void close()> scored 0.0
+<lsp.test.accounts.PlatinumAccount: boolean isOpen()> scored 0.0
+<lsp.test.accounts.PlatinumAccount: void mainLSPChecker(java.lang.String[])> scored 0.0
+<lsp.test.accounts.PlatinumAccount: void <clinit>()> scored 0.0
+<lsp.test.accounts.IAccount: void open()> scored 0.0
+<lsp.test.accounts.IAccount: void setDeposit(int)> scored 0.0
+<lsp.test.accounts.IAccount: void close()> scored 0.0
+<lsp.test.accounts.IAccount: boolean isOpen()> scored 0.0

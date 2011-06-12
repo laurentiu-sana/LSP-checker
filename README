@@ -1,1 +1,39 @@
-foo
+= Liskov substitution principle (LSP) checker =
+
+== Author ==
+* Laurentiu Dascalu (laurentiu.dascalu at epfl.ch)
+
+== Introduction ==
+
+  I started to work on this analyzer under the guidance of Silviu Andrica, EPFL, and
+it counted as my bachelor project at University "Politehnica" of Bucharest. I found
+that doing software analysis is interesting and I became interested, in particular,
+in symbolic execution.
+
+  I continued to work on the LSP checker as part of the class project, the SAV
+(synthesis analysis and verification) course teached by prof. V. Kuncak, EPFL. This
+version contains the latest presentation I gave about the project.
+
+
+== Overview ==
+* ClassHierarchyTests
+** Test cases for the project, many well known LSP violations are solved by
+this checker
+
+* ScoringAlgorithm
+** Sorts the methods by their degree of polymorphism (how much input type a
+method can accept)
+** Input: SUT
+** Output: SUT annotated with useful information (e.g. symbolic methods, fields)
+
+* SymbolicExecution
+** Does symbolic execution for the most polymorphic methods
+** Computes the preconditions, postconditions and constant methods
+(subset of the invariants of a class)
+** Uses Z3 to solve the automatically computed constraints
+
+== Links ==
+
+* http://lara.epfl.ch/w/sav11:top
+* http://research.microsoft.com/en-us/um/redmond/projects/z3/
+

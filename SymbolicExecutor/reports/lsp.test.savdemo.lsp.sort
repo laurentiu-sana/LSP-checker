@@ -1,0 +1,25 @@
+lsp.tests.LSPCheckerGeneratedTestSAVDEMO
+<lsp.test.savdemo.SAVSubClass: void precond3(lsp.test.savdemo.MyDummyInterface)> scored 2.0
+<lsp.test.savdemo.SAVSuperClass: void precond3(lsp.test.savdemo.MyDummyInterface)> scored 2.0
+<lsp.test.savdemo.SAVSubClass: void <init>()> scored 0.0
+<lsp.test.savdemo.SAVSubClass: void precond1(int)> scored 0.0
+<lsp.test.savdemo.SAVSubClass: void precond2(int,int)> scored 0.0
+<lsp.test.savdemo.DummyImplementation2: void <init>()> scored 0.0
+<lsp.test.savdemo.DummyImplementation2: void check(int)> scored 0.0
+<lsp.test.savdemo.DummyImplementation2: int doWork()> scored 0.0
+<lsp.test.savdemo.SAVSuperClass: void <init>()> scored 0.0
+<lsp.test.savdemo.SAVSuperClass: void precond1(int)> scored 0.0
+<lsp.test.savdemo.SAVSuperClass: void precond2(int,int)> scored 0.0
+<lsp.test.savdemo.MyDummyImplementation1: void <init>()> scored 0.0
+<lsp.test.savdemo.MyDummyImplementation1: int doWork()> scored 0.0
+<lsp.test.savdemo.MyDummyImplementation1: void check(int)> scored 0.0
+<lsp.test.savdemo.MyDummyImplementation2: void <init>()> scored 0.0
+<lsp.test.savdemo.MyDummyImplementation2: int doWork()> scored 0.0
+<lsp.test.savdemo.MyDummyImplementation2: void check(int)> scored 0.0
+<lsp.test.savdemo.MyDummyInterface: int doWork()> scored 0.0
+<lsp.test.savdemo.MyDummyInterface: void check(int)> scored 0.0
+<lsp.test.savdemo.SAVInterface: void check(int)> scored 0.0
+<lsp.test.savdemo.SAVInterface: int doWork()> scored 0.0
+<lsp.test.savdemo.DummyImplementation1: void <init>()> scored 0.0
+<lsp.test.savdemo.DummyImplementation1: void check(int)> scored 0.0
+<lsp.test.savdemo.DummyImplementation1: int doWork()> scored 0.0

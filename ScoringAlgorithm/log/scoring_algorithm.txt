@@ -1,0 +1,372 @@
+Starting hierarchy traverse with regex: <lsp\.test\.savdemoprecond\..*>
+[basic scoring] class lsp.test.savdemoprecond.MyDummyImplementation1 has no subclasses and scores 1.0
+[basic scoring] class lsp.test.savdemoprecond.MyDummyImplementation2 has no subclasses and scores 1.0
+[basic scoring] class lsp.test.savdemoprecond.MyDummyImplementation1 has no subclasses and scores 1.0
+[basic scoring] class lsp.test.savdemoprecond.MyDummyImplementation2 has no subclasses and scores 1.0
+[basic scoring] class lsp.test.savdemoprecond.MyDummyInterface scores 2.0
+[basic scoring] class lsp.test.savdemoprecond.SAVSubClass has no subclasses and scores 1.0
+[basic scoring] class lsp.test.savdemoprecond.SAVSuperClass scores 2.0
+[influence scoring] adding the influence of the implemented interfaces, with a normalization of 0.6
+[influence scoring] adding the influence of the contained fields, with a normalization of 0.3
+[influence scoring] adding the influence of the contained methods, with a normalization of 0.2
+[influence scoring] the current class is {lsp.test.savdemoprecond.MyDummyImplementation1}
+[influence scoring]     implements lsp.test.savdemoprecond.MyDummyInterface {score 2.0}
+[influence scoring]   interfaces scores additional 0.0 {max interface/class influence removed}
+[influence scoring]   adding the influence of the method {<lsp.test.savdemoprecond.MyDummyImplementation1: void <init>()>}
+[influence scoring]     return type void {score 0.0}
+[influence scoring]   adding the influence of the method {<lsp.test.savdemoprecond.MyDummyImplementation1: int doWork()>}
+[influence scoring]     return type int {score 0.0}
+[influence scoring]   adding the influence of the method {<lsp.test.savdemoprecond.MyDummyImplementation1: void check(int)>}
+[influence scoring]     parameter with type int {score 0.0}
+[influence scoring]     return type void {score 0.0}
+[influence scoring]   => the methods score additional 0.0
+[influence scoring] the current class is {lsp.test.savdemoprecond.MyDummyImplementation2}
+[influence scoring]     implements lsp.test.savdemoprecond.MyDummyInterface {score 2.0}
+[influence scoring]   interfaces scores additional 0.0 {max interface/class influence removed}
+[influence scoring]   adding the influence of the method {<lsp.test.savdemoprecond.MyDummyImplementation2: void <init>()>}
+[influence scoring]     return type void {score 0.0}
+[influence scoring]   adding the influence of the method {<lsp.test.savdemoprecond.MyDummyImplementation2: int doWork()>}
+[influence scoring]     return type int {score 0.0}
+[influence scoring]   adding the influence of the method {<lsp.test.savdemoprecond.MyDummyImplementation2: void check(int)>}
+[influence scoring]     parameter with type int {score 0.0}
+[influence scoring]     return type void {score 0.0}
+[influence scoring]   => the methods score additional 0.0
+[influence scoring] the current class is {lsp.test.savdemoprecond.SAVSubClass}
+[influence scoring]     extends lsp.test.savdemoprecond.SAVSuperClass {score 2.0}
+[influence scoring]   interfaces scores additional 0.0 {max interface/class influence removed}
+[influence scoring]   field of type int {score 0.0}
+[influence scoring]   => the fields score additional 0.0
+[influence scoring]   adding the influence of the method {<lsp.test.savdemoprecond.SAVSubClass: void <init>()>}
+[influence scoring]     return type void {score 0.0}
+[influence scoring]   adding the influence of the method {<lsp.test.savdemoprecond.SAVSubClass: void precond1(int)>}
+[influence scoring]     parameter with type int {score 0.0}
+[influence scoring]     return type void {score 0.0}
+[influence scoring]   adding the influence of the method {<lsp.test.savdemoprecond.SAVSubClass: void precond2(int,int)>}
+[influence scoring]     parameter with type int {score 0.0}
+[influence scoring]     parameter with type int {score 0.0}
+[influence scoring]     return type void {score 0.0}
+[influence scoring]   adding the influence of the method {<lsp.test.savdemoprecond.SAVSubClass: void precond3(lsp.test.savdemoprecond.MyDummyInterface)>}
+[influence scoring]     parameter with type lsp.test.savdemoprecond.MyDummyInterface {score 2.0}
+[influence scoring]     return type void {score 0.0}
+[influence scoring]   => the methods score additional 0.4
+[influence scoring] the current class is {lsp.test.savdemoprecond.MyDummyInterface}
+[influence scoring]   interfaces scores additional 0.0 {max interface/class influence removed}
+[influence scoring]   => the methods score additional 0.0
+[influence scoring] the current class is {lsp.test.savdemoprecond.SAVSuperClass}
+[influence scoring]   interfaces scores additional 0.0 {max interface/class influence removed}
+[influence scoring]   field of type int {score 0.0}
+[influence scoring]   => the fields score additional 0.0
+[influence scoring]   adding the influence of the method {<lsp.test.savdemoprecond.SAVSuperClass: void <init>()>}
+[influence scoring]     return type void {score 0.0}
+[influence scoring]   adding the influence of the method {<lsp.test.savdemoprecond.SAVSuperClass: void precond1(int)>}
+[influence scoring]     parameter with type int {score 0.0}
+[influence scoring]     return type void {score 0.0}
+[influence scoring]   adding the influence of the method {<lsp.test.savdemoprecond.SAVSuperClass: void precond2(int,int)>}
+[influence scoring]     parameter with type int {score 0.0}
+[influence scoring]     parameter with type int {score 0.0}
+[influence scoring]     return type void {score 0.0}
+[influence scoring]   adding the influence of the method {<lsp.test.savdemoprecond.SAVSuperClass: void precond3(lsp.test.savdemoprecond.MyDummyInterface)>}
+[influence scoring]     parameter with type lsp.test.savdemoprecond.MyDummyInterface {score 2.0}
+[influence scoring]     return type void {score 0.0}
+[influence scoring]   => the methods score additional 0.4
+[methods scoring] ordering the methods by the polymorphic score
+[methods scoring] the current class is lsp.test.savdemoprecond.MyDummyImplementation1
+[methods scoring]   the current method is <lsp.test.savdemoprecond.MyDummyImplementation1: void <init>()>
+[methods scoring]     adding the return type void {score 0.0}
+[methods scoring]   total score: 0.0
+[methods scoring]   the current method is <lsp.test.savdemoprecond.MyDummyImplementation1: int doWork()>
+[methods scoring]     adding the return type int {score 0.0}
+[methods scoring]   total score: 0.0
+[methods scoring]   the current method is <lsp.test.savdemoprecond.MyDummyImplementation1: void check(int)>
+[methods scoring]     adding field of type int {score 0.0}
+[methods scoring]     adding the return type void {score 0.0}
+[methods scoring]   total score: 0.0
+[methods scoring] the current class is lsp.test.savdemoprecond.MyDummyImplementation2
+[methods scoring]   the current method is <lsp.test.savdemoprecond.MyDummyImplementation2: void <init>()>
+[methods scoring]     adding the return type void {score 0.0}
+[methods scoring]   total score: 0.0
+[methods scoring]   the current method is <lsp.test.savdemoprecond.MyDummyImplementation2: int doWork()>
+[methods scoring]     adding the return type int {score 0.0}
+[methods scoring]   total score: 0.0
+[methods scoring]   the current method is <lsp.test.savdemoprecond.MyDummyImplementation2: void check(int)>
+[methods scoring]     adding field of type int {score 0.0}
+[methods scoring]     adding the return type void {score 0.0}
+[methods scoring]   total score: 0.0
+[methods scoring] the current class is lsp.test.savdemoprecond.SAVSubClass
+[methods scoring]   the current method is <lsp.test.savdemoprecond.SAVSubClass: void <init>()>
+[methods scoring]     adding the return type void {score 0.0}
+[methods scoring]   total score: 0.0
+[methods scoring]   the current method is <lsp.test.savdemoprecond.SAVSubClass: void precond1(int)>
+[methods scoring]     adding field of type int {score 0.0}
+[methods scoring]     adding the return type void {score 0.0}
+[methods scoring]   total score: 0.0
+[methods scoring]   the current method is <lsp.test.savdemoprecond.SAVSubClass: void precond2(int,int)>
+[methods scoring]     adding field of type int {score 0.0}
+[methods scoring]     adding field of type int {score 0.0}
+[methods scoring]     adding the return type void {score 0.0}
+[methods scoring]   total score: 0.0
+[methods scoring]   the current method is <lsp.test.savdemoprecond.SAVSubClass: void precond3(lsp.test.savdemoprecond.MyDummyInterface)>
+[methods scoring]     adding field of type lsp.test.savdemoprecond.MyDummyInterface {score 2.0}
+[methods scoring]     adding the return type void {score 0.0}
+[methods scoring]   total score: 2.0
+[methods scoring] the current class is lsp.test.savdemoprecond.MyDummyInterface
+[methods scoring]   the current method is <lsp.test.savdemoprecond.MyDummyInterface: int doWork()>
+[methods scoring]     adding the return type int {score 0.0}
+[methods scoring]   total score: 0.0
+[methods scoring]   the current method is <lsp.test.savdemoprecond.MyDummyInterface: void check(int)>
+[methods scoring]     adding field of type int {score 0.0}
+[methods scoring]     adding the return type void {score 0.0}
+[methods scoring]   total score: 0.0
+[methods scoring] the current class is lsp.test.savdemoprecond.SAVSuperClass
+[methods scoring]   the current method is <lsp.test.savdemoprecond.SAVSuperClass: void <init>()>
+[methods scoring]     adding the return type void {score 0.0}
+[methods scoring]   total score: 0.0
+[methods scoring]   the current method is <lsp.test.savdemoprecond.SAVSuperClass: void precond1(int)>
+[methods scoring]     adding field of type int {score 0.0}
+[methods scoring]     adding the return type void {score 0.0}
+[methods scoring]   total score: 0.0
+[methods scoring]   the current method is <lsp.test.savdemoprecond.SAVSuperClass: void precond2(int,int)>
+[methods scoring]     adding field of type int {score 0.0}
+[methods scoring]     adding field of type int {score 0.0}
+[methods scoring]     adding the return type void {score 0.0}
+[methods scoring]   total score: 0.0
+[methods scoring]   the current method is <lsp.test.savdemoprecond.SAVSuperClass: void precond3(lsp.test.savdemoprecond.MyDummyInterface)>
+[methods scoring]     adding field of type lsp.test.savdemoprecond.MyDummyInterface {score 2.0}
+[methods scoring]     adding the return type void {score 0.0}
+[methods scoring]   total score: 2.0
+Starting hierarchy traverse with regex: <lsp\.test\.savdemopostcond\..*>
+[basic scoring] class lsp.test.savdemopostcond.NothingClassPostconditions has no subclasses and scores 1.0
+[basic scoring] class lsp.test.savdemopostcond.SubClassPostconditions scores 2.0
+[basic scoring] class lsp.test.savdemopostcond.SuperClassPostconditions scores 3.0
+[basic scoring] class lsp.test.savdemopostcond.InterfacePostconditions scores 4.0
+[basic scoring] class lsp.test.savdemopostcond.NothingClassPostconditions has no subclasses and scores 1.0
+[basic scoring] class lsp.test.savdemopostcond.DummyPostcondition has no subclasses and scores 1.0
+[basic scoring] class lsp.test.savdemopostcond.SubClass has no subclasses and scores 1.0
+[basic scoring] class lsp.test.savdemopostcond.SuperClass scores 2.0
+[influence scoring] adding the influence of the implemented interfaces, with a normalization of 0.6
+[influence scoring] adding the influence of the contained fields, with a normalization of 0.3
+[influence scoring] adding the influence of the contained methods, with a normalization of 0.2
+[influence scoring] the current class is {lsp.test.savdemopostcond.InterfacePostconditions}
+[influence scoring]   interfaces scores additional 0.0 {max interface/class influence removed}
+[influence scoring]   => the methods score additional 0.0
+[influence scoring] the current class is {lsp.test.savdemopostcond.NothingClassPostconditions}
+[influence scoring]     extends lsp.test.savdemopostcond.SubClassPostconditions {score 2.0}
+[influence scoring]   interfaces scores additional 0.0 {max interface/class influence removed}
+[influence scoring]   adding the influence of the method {<lsp.test.savdemopostcond.NothingClassPostconditions: void <init>()>}
+[influence scoring]     return type void {score 0.0}
+[influence scoring]   adding the influence of the method {<lsp.test.savdemopostcond.NothingClassPostconditions: int doWork(int)>}
+[influence scoring]     parameter with type int {score 0.0}
+[influence scoring]     return type int {score 0.0}
+[influence scoring]   => the methods score additional 0.0
+[influence scoring] the current class is {lsp.test.savdemopostcond.SubClassPostconditions}
+[influence scoring]     extends lsp.test.savdemopostcond.SuperClassPostconditions {score 3.0}
+[influence scoring]   interfaces scores additional 0.0 {max interface/class influence removed}
+[influence scoring]   adding the influence of the method {<lsp.test.savdemopostcond.SubClassPostconditions: void <init>()>}
+[influence scoring]     return type void {score 0.0}
+[influence scoring]   adding the influence of the method {<lsp.test.savdemopostcond.SubClassPostconditions: int doWork(int)>}
+[influence scoring]     parameter with type int {score 0.0}
+[influence scoring]     return type int {score 0.0}
+[influence scoring]   => the methods score additional 0.0
+[influence scoring] the current class is {lsp.test.savdemopostcond.SuperClassPostconditions}
+[influence scoring]     implements lsp.test.savdemopostcond.InterfacePostconditions {score 4.0}
+[influence scoring]   interfaces scores additional 0.0 {max interface/class influence removed}
+[influence scoring]   adding the influence of the method {<lsp.test.savdemopostcond.SuperClassPostconditions: void <init>()>}
+[influence scoring]     return type void {score 0.0}
+[influence scoring]   adding the influence of the method {<lsp.test.savdemopostcond.SuperClassPostconditions: int doWork(int)>}
+[influence scoring]     parameter with type int {score 0.0}
+[influence scoring]     return type int {score 0.0}
+[influence scoring]   => the methods score additional 0.0
+[influence scoring] the current class is {lsp.test.savdemopostcond.DummyPostcondition}
+[influence scoring]   interfaces scores additional 0.0 {max interface/class influence removed}
+[influence scoring]   adding the influence of the method {<lsp.test.savdemopostcond.DummyPostcondition: void <init>()>}
+[influence scoring]     return type void {score 0.0}
+[influence scoring]   adding the influence of the method {<lsp.test.savdemopostcond.DummyPostcondition: int postcond9(lsp.test.savdemopostcond.InterfacePostconditions,int)>}
+[influence scoring]     parameter with type lsp.test.savdemopostcond.InterfacePostconditions {score 4.0}
+[influence scoring]     parameter with type int {score 0.0}
+[influence scoring]     return type int {score 0.0}
+[influence scoring]   adding the influence of the method {<lsp.test.savdemopostcond.DummyPostcondition: int postcond10(lsp.test.savdemopostcond.SubClassPostconditions,int)>}
+[influence scoring]     parameter with type lsp.test.savdemopostcond.SubClassPostconditions {score 2.0}
+[influence scoring]     parameter with type int {score 0.0}
+[influence scoring]     return type int {score 0.0}
+[influence scoring]   => the methods score additional 1.2000000000000002
+[influence scoring] the current class is {lsp.test.savdemopostcond.SuperClass}
+[influence scoring]   interfaces scores additional 0.0 {max interface/class influence removed}
+[influence scoring]   field of type int {score 0.0}
+[influence scoring]   field of type int {score 0.0}
+[influence scoring]   field of type int {score 0.0}
+[influence scoring]   field of type int {score 0.0}
+[influence scoring]   => the fields score additional 0.0
+[influence scoring]   adding the influence of the method {<lsp.test.savdemopostcond.SuperClass: void <init>()>}
+[influence scoring]     return type void {score 0.0}
+[influence scoring]   adding the influence of the method {<lsp.test.savdemopostcond.SuperClass: int postcond(int)>}
+[influence scoring]     parameter with type int {score 0.0}
+[influence scoring]     return type int {score 0.0}
+[influence scoring]   adding the influence of the method {<lsp.test.savdemopostcond.SuperClass: int postcond1(int)>}
+[influence scoring]     parameter with type int {score 0.0}
+[influence scoring]     return type int {score 0.0}
+[influence scoring]   adding the influence of the method {<lsp.test.savdemopostcond.SuperClass: int postcond2(int,int)>}
+[influence scoring]     parameter with type int {score 0.0}
+[influence scoring]     parameter with type int {score 0.0}
+[influence scoring]     return type int {score 0.0}
+[influence scoring]   adding the influence of the method {<lsp.test.savdemopostcond.SuperClass: int postcond3(int,int)>}
+[influence scoring]     parameter with type int {score 0.0}
+[influence scoring]     parameter with type int {score 0.0}
+[influence scoring]     return type int {score 0.0}
+[influence scoring]   adding the influence of the method {<lsp.test.savdemopostcond.SuperClass: int postcond4(int,int)>}
+[influence scoring]     parameter with type int {score 0.0}
+[influence scoring]     parameter with type int {score 0.0}
+[influence scoring]     return type int {score 0.0}
+[influence scoring]   adding the influence of the method {<lsp.test.savdemopostcond.SuperClass: int postcond5(int,int)>}
+[influence scoring]     parameter with type int {score 0.0}
+[influence scoring]     parameter with type int {score 0.0}
+[influence scoring]     return type int {score 0.0}
+[influence scoring]   adding the influence of the method {<lsp.test.savdemopostcond.SuperClass: int postcond6(int)>}
+[influence scoring]     parameter with type int {score 0.0}
+[influence scoring]     return type int {score 0.0}
+[influence scoring]   adding the influence of the method {<lsp.test.savdemopostcond.SuperClass: int getStaticMember()>}
+[influence scoring]     return type int {score 0.0}
+[influence scoring]   adding the influence of the method {<lsp.test.savdemopostcond.SuperClass: int postcond7(int)>}
+[influence scoring]     parameter with type int {score 0.0}
+[influence scoring]     return type int {score 0.0}
+[influence scoring]   adding the influence of the method {<lsp.test.savdemopostcond.SuperClass: void doSomething(int)>}
+[influence scoring]     parameter with type int {score 0.0}
+[influence scoring]     return type void {score 0.0}
+[influence scoring]   adding the influence of the method {<lsp.test.savdemopostcond.SuperClass: int postcond8(int)>}
+[influence scoring]     parameter with type int {score 0.0}
+[influence scoring]     return type int {score 0.0}
+[influence scoring]   adding the influence of the method {<lsp.test.savdemopostcond.SuperClass: int postcond9(lsp.test.savdemopostcond.InterfacePostconditions,int)>}
+[influence scoring]     parameter with type lsp.test.savdemopostcond.InterfacePostconditions {score 4.0}
+[influence scoring]     parameter with type int {score 0.0}
+[influence scoring]     return type int {score 0.0}
+[influence scoring]   adding the influence of the method {<lsp.test.savdemopostcond.SuperClass: int postcond10(lsp.test.savdemopostcond.SubClassPostconditions,int)>}
+[influence scoring]     parameter with type lsp.test.savdemopostcond.SubClassPostconditions {score 2.0}
+[influence scoring]     parameter with type int {score 0.0}
+[influence scoring]     return type int {score 0.0}
+[influence scoring]   adding the influence of the method {<lsp.test.savdemopostcond.SuperClass: void <clinit>()>}
+[influence scoring]     return type void {score 0.0}
+[influence scoring]   => the methods score additional 1.2000000000000002
+[influence scoring] the current class is {lsp.test.savdemopostcond.SubClass}
+[influence scoring]     extends lsp.test.savdemopostcond.SuperClass {score 3.2}
+[influence scoring]   interfaces scores additional 0.0 {max interface/class influence removed}
+[influence scoring]   adding the influence of the method {<lsp.test.savdemopostcond.SubClass: void <init>()>}
+[influence scoring]     return type void {score 0.0}
+[influence scoring]   adding the influence of the method {<lsp.test.savdemopostcond.SubClass: int postcond(int)>}
+[influence scoring]     parameter with type int {score 0.0}
+[influence scoring]     return type int {score 0.0}
+[influence scoring]   => the methods score additional 0.0
+[methods scoring] ordering the methods by the polymorphic score
+[methods scoring] the current class is lsp.test.savdemopostcond.InterfacePostconditions
+[methods scoring]   the current method is <lsp.test.savdemopostcond.InterfacePostconditions: int doWork(int)>
+[methods scoring]     adding field of type int {score 0.0}
+[methods scoring]     adding the return type int {score 0.0}
+[methods scoring]   total score: 0.0
+[methods scoring] the current class is lsp.test.savdemopostcond.NothingClassPostconditions
+[methods scoring]   the current method is <lsp.test.savdemopostcond.NothingClassPostconditions: void <init>()>
+[methods scoring]     adding the return type void {score 0.0}
+[methods scoring]   total score: 0.0
+[methods scoring]   the current method is <lsp.test.savdemopostcond.NothingClassPostconditions: int doWork(int)>
+[methods scoring]     adding field of type int {score 0.0}
+[methods scoring]     adding the return type int {score 0.0}
+[methods scoring]   total score: 0.0
+[methods scoring] the current class is lsp.test.savdemopostcond.SubClassPostconditions
+[methods scoring]   the current method is <lsp.test.savdemopostcond.SubClassPostconditions: void <init>()>
+[methods scoring]     adding the return type void {score 0.0}
+[methods scoring]   total score: 0.0
+[methods scoring]   the current method is <lsp.test.savdemopostcond.SubClassPostconditions: int doWork(int)>
+[methods scoring]     adding field of type int {score 0.0}
+[methods scoring]     adding the return type int {score 0.0}
+[methods scoring]   total score: 0.0
+[methods scoring] the current class is lsp.test.savdemopostcond.SuperClassPostconditions
+[methods scoring]   the current method is <lsp.test.savdemopostcond.SuperClassPostconditions: void <init>()>
+[methods scoring]     adding the return type void {score 0.0}
+[methods scoring]   total score: 0.0
+[methods scoring]   the current method is <lsp.test.savdemopostcond.SuperClassPostconditions: int doWork(int)>
+[methods scoring]     adding field of type int {score 0.0}
+[methods scoring]     adding the return type int {score 0.0}
+[methods scoring]   total score: 0.0
+[methods scoring] the current class is lsp.test.savdemopostcond.DummyPostcondition
+[methods scoring]   the current method is <lsp.test.savdemopostcond.DummyPostcondition: void <init>()>
+[methods scoring]     adding the return type void {score 0.0}
+[methods scoring]   total score: 0.0
+[methods scoring]   the current method is <lsp.test.savdemopostcond.DummyPostcondition: int postcond9(lsp.test.savdemopostcond.InterfacePostconditions,int)>
+[methods scoring]     adding field of type lsp.test.savdemopostcond.InterfacePostconditions {score 4.0}
+[methods scoring]     adding field of type int {score 0.0}
+[methods scoring]     adding the return type int {score 0.0}
+[methods scoring]   total score: 4.0
+[methods scoring]   the current method is <lsp.test.savdemopostcond.DummyPostcondition: int postcond10(lsp.test.savdemopostcond.SubClassPostconditions,int)>
+[methods scoring]     adding field of type lsp.test.savdemopostcond.SubClassPostconditions {score 2.0}
+[methods scoring]     adding field of type int {score 0.0}
+[methods scoring]     adding the return type int {score 0.0}
+[methods scoring]   total score: 2.0
+[methods scoring] the current class is lsp.test.savdemopostcond.SuperClass
+[methods scoring]   the current method is <lsp.test.savdemopostcond.SuperClass: void <init>()>
+[methods scoring]     adding the return type void {score 0.0}
+[methods scoring]   total score: 0.0
+[methods scoring]   the current method is <lsp.test.savdemopostcond.SuperClass: int postcond(int)>
+[methods scoring]     adding field of type int {score 0.0}
+[methods scoring]     adding the return type int {score 0.0}
+[methods scoring]   total score: 0.0
+[methods scoring]   the current method is <lsp.test.savdemopostcond.SuperClass: int postcond1(int)>
+[methods scoring]     adding field of type int {score 0.0}
+[methods scoring]     adding the return type int {score 0.0}
+[methods scoring]   total score: 0.0
+[methods scoring]   the current method is <lsp.test.savdemopostcond.SuperClass: int postcond2(int,int)>
+[methods scoring]     adding field of type int {score 0.0}
+[methods scoring]     adding field of type int {score 0.0}
+[methods scoring]     adding the return type int {score 0.0}
+[methods scoring]   total score: 0.0
+[methods scoring]   the current method is <lsp.test.savdemopostcond.SuperClass: int postcond3(int,int)>
+[methods scoring]     adding field of type int {score 0.0}
+[methods scoring]     adding field of type int {score 0.0}
+[methods scoring]     adding the return type int {score 0.0}
+[methods scoring]   total score: 0.0
+[methods scoring]   the current method is <lsp.test.savdemopostcond.SuperClass: int postcond4(int,int)>
+[methods scoring]     adding field of type int {score 0.0}
+[methods scoring]     adding field of type int {score 0.0}
+[methods scoring]     adding the return type int {score 0.0}
+[methods scoring]   total score: 0.0
+[methods scoring]   the current method is <lsp.test.savdemopostcond.SuperClass: int postcond5(int,int)>
+[methods scoring]     adding field of type int {score 0.0}
+[methods scoring]     adding field of type int {score 0.0}
+[methods scoring]     adding the return type int {score 0.0}
+[methods scoring]   total score: 0.0
+[methods scoring]   the current method is <lsp.test.savdemopostcond.SuperClass: int postcond6(int)>
+[methods scoring]     adding field of type int {score 0.0}
+[methods scoring]     adding the return type int {score 0.0}
+[methods scoring]   total score: 0.0
+[methods scoring]   the current method is <lsp.test.savdemopostcond.SuperClass: int getStaticMember()>
+[methods scoring]     adding the return type int {score 0.0}
+[methods scoring]   total score: 0.0
+[methods scoring]   the current method is <lsp.test.savdemopostcond.SuperClass: int postcond7(int)>
+[methods scoring]     adding field of type int {score 0.0}
+[methods scoring]     adding the return type int {score 0.0}
+[methods scoring]   total score: 0.0
+[methods scoring]   the current method is <lsp.test.savdemopostcond.SuperClass: void doSomething(int)>
+[methods scoring]     adding field of type int {score 0.0}
+[methods scoring]     adding the return type void {score 0.0}
+[methods scoring]   total score: 0.0
+[methods scoring]   the current method is <lsp.test.savdemopostcond.SuperClass: int postcond8(int)>
+[methods scoring]     adding field of type int {score 0.0}
+[methods scoring]     adding the return type int {score 0.0}
+[methods scoring]   total score: 0.0
+[methods scoring]   the current method is <lsp.test.savdemopostcond.SuperClass: int postcond9(lsp.test.savdemopostcond.InterfacePostconditions,int)>
+[methods scoring]     adding field of type lsp.test.savdemopostcond.InterfacePostconditions {score 4.0}
+[methods scoring]     adding field of type int {score 0.0}
+[methods scoring]     adding the return type int {score 0.0}
+[methods scoring]   total score: 4.0
+[methods scoring]   the current method is <lsp.test.savdemopostcond.SuperClass: int postcond10(lsp.test.savdemopostcond.SubClassPostconditions,int)>
+[methods scoring]     adding field of type lsp.test.savdemopostcond.SubClassPostconditions {score 2.0}
+[methods scoring]     adding field of type int {score 0.0}
+[methods scoring]     adding the return type int {score 0.0}
+[methods scoring]   total score: 2.0
+[methods scoring]   the current method is <lsp.test.savdemopostcond.SuperClass: void <clinit>()>
+[methods scoring]     adding the return type void {score 0.0}
+[methods scoring]   total score: 0.0
+[methods scoring] the current class is lsp.test.savdemopostcond.SubClass
+[methods scoring]   the current method is <lsp.test.savdemopostcond.SubClass: void <init>()>
+[methods scoring]     adding the return type void {score 0.0}
+[methods scoring]   total score: 0.0
+[methods scoring]   the current method is <lsp.test.savdemopostcond.SubClass: int postcond(int)>
+[methods scoring]     adding field of type int {score 0.0}
+[methods scoring]     adding the return type int {score 0.0}
+[methods scoring]   total score: 0.0

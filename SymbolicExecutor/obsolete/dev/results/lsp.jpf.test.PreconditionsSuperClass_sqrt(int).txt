@@ -1,0 +1,24 @@
+[Method summary]
+Symbolic values: x_1_SYMINT
+
+<preconditions>
+</preconditions>
+
+<postconditions>
+    <pathconditions>
+# = 1
+x_1_SYMINT[-10000] < CONST_0
+SPC # = 0 # = 2
+REAL_24223536[0.0] == x_1_SYMINT[0] &&
+x_1_SYMINT[0] >= CONST_0
+SPC # = 0 
+    </pathconditions>
+    <testcases>
+
+sqrt(-10000)  --> 0
+sqrt(0)  --> 0
+    </testcases>
+</postconditions>
+
+<invariants>
+</invariants>

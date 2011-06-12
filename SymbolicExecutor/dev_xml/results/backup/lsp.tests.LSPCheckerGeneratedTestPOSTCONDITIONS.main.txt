@@ -1,0 +1,114 @@
+Generating report for the entry point lsp.tests.LSPCheckerGeneratedTestPOSTCONDITIONS.main
+
+###### 1. Method summary [lsp.test.postconditions.NothingClassPostconditions.doWork(int)]
+1.0. Symbolic return: I
+1.1. Symbolic values: x_110_SYMINT
+1.2. Preconditions
+1.2.1 Preconditions from virtual methods
+1.3. Postconditions
+1.3.1 Path conditions
+( < x 0 )||||( * x 100 )
+parameter instanceof lsp.test.postconditions.NothingClassPostconditions && ( < x 0 )||||( * x 100 )
+parameter instanceof lsp.test.postconditions.NothingClassPostconditions && ( >= x 0 )||||( * x 100 )
+
+1.3.2 Generated test cases
+doWork(don't care) ( * x 100 )
+
+
+###### 2. Method summary [lsp.test.postconditions.SuperClassPostconditions.doWork(int)]
+2.0. Symbolic return: I
+2.1. Symbolic values: x_2_SYMINT
+2.2. Preconditions
+2.2.1 Preconditions from virtual methods
+2.3. Postconditions
+2.3.1 Path conditions
+( < x 0 )||||( + x x )
+( >= x 0 )||||( + x x )
+
+2.3.2 Generated test cases
+doWork() ( + x x )
+
+
+###### 3. Method summary [lsp.test.postconditions.DummyPostcondition.postcond10(lsp.test.postconditions.SubClassPostconditions,int)]
+3.0. Symbolic return: I
+3.1. Symbolic values: ip_107_SYMREF,x_108_SYMINT
+3.2. Preconditions
+3.2.1 Preconditions from virtual methods
+3.3. Postconditions
+3.3.1 Path conditions
+parameter instanceof lsp.test.postconditions.SubClassPostconditions && ( < x 0 )||||( * ( - 0 x ) 3 )
+parameter instanceof lsp.test.postconditions.NothingClassPostconditions && ( < x 0 )||||( * ( * x 100 ) 3 )
+parameter instanceof lsp.test.postconditions.NothingClassPostconditions && ( >= x 0 )||||( + ( * x 100 ) x )
+parameter instanceof lsp.test.postconditions.SubClassPostconditions && ( >= x 0 )||||( + ( - 0 x ) x )
+
+3.3.2 Generated test cases
+postcond10(don't care,don't care) ( * ( - 0 x ) 3 )
+
+postcond10(don't care,don't care) ( * ( * x 100 ) 3 )
+
+postcond10(don't care,don't care) ( + ( * x 100 ) x )
+
+postcond10(don't care,don't care) ( + ( - 0 x ) x )
+
+postcond10(don't care) ( * ( * x 100 ) 3 )
+
+postcond10(don't care) ( + ( * x 100 ) x )
+
+
+###### 4. Method summary [lsp.test.postconditions.DummyPostcondition.postcond9(lsp.test.postconditions.InterfacePostconditions,int)]
+4.0. Symbolic return: I
+4.1. Symbolic values: ip_85_SYMREF,x_86_SYMINT
+4.2. Preconditions
+4.2.1 Preconditions from virtual methods
+4.3. Postconditions
+4.3.1 Path conditions
+parameter instanceof lsp.test.postconditions.SuperClassPostconditions && ( < x 0 )||||( * ( + x x ) 3 )
+parameter instanceof lsp.test.postconditions.SubClassPostconditions && ( < x 0 )||||( * ( - 0 x ) 3 )
+parameter instanceof lsp.test.postconditions.NothingClassPostconditions && ( < x 0 )||||( * ( * x 100 ) 3 )
+parameter instanceof lsp.test.postconditions.NothingClassPostconditions && ( >= x 0 )||||( + ( * x 100 ) x )
+parameter instanceof lsp.test.postconditions.SubClassPostconditions && ( >= x 0 )||||( + ( - 0 x ) x )
+parameter instanceof lsp.test.postconditions.SuperClassPostconditions && ( >= x 0 )||||( + ( + x x ) x )
+
+4.3.2 Generated test cases
+postcond9(don't care,don't care) ( * ( + x x ) 3 )
+
+postcond9(don't care,don't care) ( * ( - 0 x ) 3 )
+
+postcond9(don't care,don't care) ( * ( * x 100 ) 3 )
+
+postcond9(don't care,don't care) ( + ( * x 100 ) x )
+
+postcond9(don't care,don't care) ( + ( - 0 x ) x )
+
+postcond9(don't care,don't care) ( + ( + x x ) x )
+
+postcond9(don't care) ( * ( * x 100 ) 3 )
+
+postcond9(don't care) ( + ( * x 100 ) x )
+
+
+###### 5. Method summary [lsp.test.postconditions.SubClassPostconditions.doWork(int)]
+5.0. Symbolic return: I
+5.1. Symbolic values: x_106_SYMINT
+5.2. Preconditions
+5.2.1 Preconditions from virtual methods
+5.3. Postconditions
+5.3.1 Path conditions
+( < x 0 )||||( - 0 x )
+parameter instanceof lsp.test.postconditions.SubClassPostconditions && ( < x 0 )||||( - 0 x )
+parameter instanceof lsp.test.postconditions.SubClassPostconditions && ( >= x 0 )||||( - 0 x )
+
+5.3.2 Generated test cases
+doWork(don't care) ( - 0 x )
+
+
+###### Constant Methods
+lsp.test.postconditions.NothingClassPostconditions
+lsp.test.postconditions.NothingClassPostconditions.doWork(I)I
+lsp.test.postconditions.DummyPostcondition
+lsp.test.postconditions.DummyPostcondition.postcond9(Llsp/test/postconditions/InterfacePostconditions;I)I
+lsp.test.postconditions.DummyPostcondition.postcond10(Llsp/test/postconditions/SubClassPostconditions;I)I
+lsp.test.postconditions.SubClassPostconditions
+lsp.test.postconditions.SubClassPostconditions.doWork(I)I
+lsp.test.postconditions.SuperClassPostconditions
+lsp.test.postconditions.SuperClassPostconditions.doWork(I)I

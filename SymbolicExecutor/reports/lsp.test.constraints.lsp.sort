@@ -1,0 +1,16 @@
+lsp.tests.LSPCheckerGeneratedTestCONSTRAINTS
+<lsp.test.constraints.SuperClass: void <init>()> scored 0.0
+<lsp.test.constraints.SuperClass: int preconditions(int)> scored 0.0
+<lsp.test.constraints.SuperClass: int postconditions(int)> scored 0.0
+<lsp.test.constraints.SuperClass: void invariants(int)> scored 0.0
+<lsp.test.constraints.SuperClass: int constantMethod()> scored 0.0
+<lsp.test.constraints.SuperClass: java.lang.String toString()> scored 0.0
+<lsp.test.constraints.SuperClass: void mainLSPChecker(java.lang.String[])> scored 0.0
+<lsp.test.constraints.ConstraintsTest: void <init>()> scored 0.0
+<lsp.test.constraints.ConstraintsTest: void mainLSPChecker(java.lang.String[])> scored 0.0
+<lsp.test.constraints.SubClass: void <init>()> scored 0.0
+<lsp.test.constraints.SubClass: int preconditions(int)> scored 0.0
+<lsp.test.constraints.SubClass: int postconditions(int)> scored 0.0
+<lsp.test.constraints.SubClass: void invariants(int)> scored 0.0
+<lsp.test.constraints.SubClass: int constantMethod()> scored 0.0
+<lsp.test.constraints.SubClass: void mainLSPChecker(java.lang.String[])> scored 0.0

@@ -1,0 +1,11 @@
+lsp.tests.LSPCheckerGeneratedTestSORTING
+<lsp.test.sorting.SortingTest: void doWork(lsp.test.sorting.ISort)> scored 3.0
+<lsp.test.sorting.BasicSortingAlgorithm: void <init>()> scored 0.0
+<lsp.test.sorting.BasicSortingAlgorithm: void sort(int[])> scored 0.0
+<lsp.test.sorting.SortingTest: void <init>()> scored 0.0
+<lsp.test.sorting.SortingTest: void mainLSPChecker(java.lang.String[])> scored 0.0
+<lsp.test.sorting.ISort: void sort(int[])> scored 0.0
+<lsp.test.sorting.BubblesortAlgorithm: void <init>()> scored 0.0
+<lsp.test.sorting.BubblesortAlgorithm: void sort(int[])> scored 0.0
+<lsp.test.sorting.IncorrectSortingAlgorithm: void <init>()> scored 0.0
+<lsp.test.sorting.IncorrectSortingAlgorithm: void sort(int[])> scored 0.0

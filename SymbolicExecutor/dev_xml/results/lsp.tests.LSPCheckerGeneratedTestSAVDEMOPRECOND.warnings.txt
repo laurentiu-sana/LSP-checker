@@ -1,0 +1,48 @@
+[WARNING] {different preconditions}
+    lsp.test.savdemoprecond.SAVSuperClass vs lsp.test.savdemoprecond.SAVSubClass :: precond2
+    SUPERCLASS: 
+(and obj_instanceof_lsp_test_savdemoprecond_SAVSuperClass ( < input.member 5 ))||||Throws unhandled exception
+(and  ( < input.member 5 ))||||Throws unhandled exception[inherited]
+(and  (and ( < input.member 10) ( >= input.member 5 ) ))||||Throws unhandled exception
+(and obj_instanceof_lsp_test_savdemoprecond_SAVSubClass ( < input.member 10 ))||||Throws unhandled exception
+
+    SUBCLASS: 
+(and  ( > ( + y input.member ) 100 ))||||Throws unhandled exception
+    Z3: 
+(define obj_instanceof_lsp_test_savdemoprecond_SAVSubClass false)
+(define obj_instanceof_lsp_test_savdemoprecond_SAVSuperClass true)
+(define input.member 5)
+(define y 96)
+sat
+[stderr] fixme:heap:HeapSetInformation (nil) 1 (nil) 0
+
+[WARNING] {different preconditions}
+    lsp.test.savdemoprecond.SAVSuperClass vs lsp.test.savdemoprecond.SAVSubClass :: precond1
+    SUPERCLASS: 
+(and  ( < input.member 5 ))||||Throws unhandled exception
+
+    SUBCLASS: 
+(and  ( < input.member 10 ))||||Throws unhandled exception
+    Z3: 
+(define input.member 5)
+sat
+[stderr] fixme:heap:HeapSetInformation (nil) 1 (nil) 0
+
+[WARNING] {different preconditions}
+    lsp.test.savdemoprecond.SAVSuperClass vs lsp.test.savdemoprecond.SAVSubClass :: precond3
+    SUPERCLASS: 
+(and obj_instanceof_lsp_test_savdemoprecond_MyDummyImplementation2 ( > input.member 10 ))||||Assert failed
+(and obj_instanceof_lsp_test_savdemoprecond_MyDummyImplementation1 ( < input.member 0 ))||||Assert failed
+
+    SUBCLASS: 
+(and  (and ( < input.member 7) (and ( > input.member 5) ( <= input.member 10 ) ) ))||||Throws unhandled exception
+(and obj_instanceof_lsp_test_savdemoprecond_MyDummyImplementation2 ( > input.member 10 ))||||Assert failed
+(and  (and ( < input.member 7) (and ( > input.member 5) ( >= input.member 0 ) ) ))||||Throws unhandled exception
+(and obj_instanceof_lsp_test_savdemoprecond_MyDummyImplementation1 ( < input.member 0 ))||||Assert failed
+    Z3: 
+(define obj_instanceof_lsp_test_savdemoprecond_MyDummyImplementation1 false)
+(define obj_instanceof_lsp_test_savdemoprecond_MyDummyImplementation2 true)
+(define input.member 6)
+sat
+[stderr] fixme:heap:HeapSetInformation (nil) 1 (nil) 0
+

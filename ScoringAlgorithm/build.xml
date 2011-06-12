@@ -1,0 +1,72 @@
+<project name="ScoringAlgorithm" basedir="." default="main">
+	<property name="base.dir" value="." />
+	<property name="src.dir" value="src" />
+	<property name="build.dir" value="build" />
+	<property name="classes.dir" value="${build.dir}/classes" />
+	<property name="jar.dir" value="${build.dir}/jar" />
+	<property name="lib.dir" value="lib" />
+	<property name="cfg.dir" value="config" />
+	<property name="sut.dir" value="input/classes" />
+	<property name="tests.class" value="lsp.scoring.test.TestUnits" />
+	<property name="main-class" value="lsp.scoring.ScoringAlgorithmMain" />
+	<property name="config.file" value="" />
+
+	<path id="classpath">
+		<fileset dir="${lib.dir}" includes="**/*.jar" />
+		<path location="${cfg.dir}" />
+	</path>
+
+	<target name="clean">
+		<delete dir="${build.dir}" />
+	</target>
+
+	<target name="compile-tests">
+		<mkdir dir="${classes.dir}" />
+		<javac srcdir="${g.tests.dir}" destdir="${g.results.dir}" classpathref="classpath" debug="on">
+			<classpath>
+				<path refid="classpath" />
+				<path location="${sut.dir}" />
+			</classpath>
+		</javac>
+	</target>
+
+	<target name="compile">
+		<mkdir dir="${classes.dir}" />
+		<javac srcdir="${src.dir}" destdir="${classes.dir}" classpathref="classpath" debug="on" />
+	</target>
+
+	<target name="jar">
+		<mkdir dir="${jar.dir}" />
+		<jar destfile="${jar.dir}/${ant.project.name}.jar" basedir="${classes.dir}">
+			<manifest>
+				<attribute name="Main-Class" value="${main-class}" />
+			</manifest>
+		</jar>
+	</target>
+
+	<target name="run" depends="jar">
+		<java fork="true" classname="${main-class}" maxmemory="3072m">
+			<arg value="--config" />
+			<arg value="${config.file}" />
+			<classpath>
+				<path refid="classpath" />
+				<path location="${jar.dir}/${ant.project.name}.jar" />
+			</classpath>
+		</java>
+	</target>
+
+	<target name="test" depends="jar">
+		<junit>
+			<classpath>
+				<path refid="classpath" />
+				<path location="${jar.dir}/${ant.project.name}.jar" />
+			</classpath>
+
+			<formatter type="brief" usefile="false" />
+			<test name="${tests.class}" />
+		</junit>
+	</target>
+
+	<target name="main" depends="compile, jar" />
+
+</project>

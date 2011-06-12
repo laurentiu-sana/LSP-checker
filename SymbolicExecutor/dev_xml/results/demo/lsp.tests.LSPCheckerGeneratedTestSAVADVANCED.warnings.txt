@@ -1,0 +1,18 @@
+[WARNING] {different preconditions}
+    lsp.test.savadvanced.Superclass vs lsp.test.savadvanced.Subclass :: precond
+    SUPERCLASS: 
+(and obj_instanceof_lsp_test_savadvanced_MyDummyImplementation1 ( < input.member 0 ))||||Throws unhandled exception
+(and obj_instanceof_lsp_test_savadvanced_MyDummyImplementation2 ( > input.member 10 ))||||Throws unhandled exception
+
+    SUBCLASS: 
+(and  (and ( < input.member 7) (and ( > input.member 5) ( <= input.member 10 ) ) ))||||Throws unhandled exception
+(and obj_instanceof_lsp_test_savadvanced_MyDummyImplementation1 ( < input.member 0 ))||||Throws unhandled exception
+(and  (and ( < input.member 7) (and ( > input.member 5) ( >= input.member 0 ) ) ))||||Throws unhandled exception
+(and obj_instanceof_lsp_test_savadvanced_MyDummyImplementation2 ( > input.member 10 ))||||Throws unhandled exception
+    Z3: 
+(define obj_instanceof_lsp_test_savadvanced_MyDummyImplementation2 false)
+(define obj_instanceof_lsp_test_savadvanced_MyDummyImplementation1 true)
+(define input.member 6)
+sat
+[stderr] fixme:heap:HeapSetInformation (nil) 1 (nil) 0
+

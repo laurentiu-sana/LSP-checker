@@ -1,0 +1,12 @@
+lsp.tests.LSPCheckerGeneratedTestNUMERIC
+<lsp.test.numeric.NumericTest: lsp.test.numeric.MyInteger[][][] allocateArray(java.lang.Class,int,int,int)> scored 12.516899999999998
+<lsp.test.numeric.NumericTest: void doWork(lsp.test.numeric.MyInteger[][][])> scored 8.516899999999998
+<lsp.test.numeric.NumericTest: void doWork(lsp.test.numeric.MyInteger)> scored 5.6
+<lsp.test.numeric.MyDouble: void <init>()> scored 0.0
+<lsp.test.numeric.MyDouble: void setValue(double)> scored 0.0
+<lsp.test.numeric.MyDouble: int getValue()> scored 0.0
+<lsp.test.numeric.NumericTest: void <init>()> scored 0.0
+<lsp.test.numeric.NumericTest: void mainLSPChecker(java.lang.String[])> scored 0.0
+<lsp.test.numeric.MyInteger: void <init>()> scored 0.0
+<lsp.test.numeric.MyInteger: void setValue(int)> scored 0.0
+<lsp.test.numeric.MyInteger: int getValue()> scored 0.0

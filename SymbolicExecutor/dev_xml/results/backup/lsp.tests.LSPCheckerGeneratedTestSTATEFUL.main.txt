@@ -1,0 +1,600 @@
+Generating report for the entry point lsp.tests.LSPCheckerGeneratedTestSTATEFUL.main
+
+###### 1. Method summary [lsp.test.stateful.DummyImplementation3.preconditions(int)]
+1.0. Symbolic return: V
+1.1. Symbolic values: x_2255_SYMINT
+1.2. Preconditions
+(and  ( < x 0 ))||||Assert failed
+1.2.1 Preconditions from virtual methods
+1.3. Postconditions
+1.3.1 Path conditions
+parameter instanceof lsp.test.stateful.DummyImplementation3 && ( >= x 0 )
+parameter instanceof lsp.test.stateful.DummyImplementation4 && ( >= x 0 )
+
+1.3.2 Generated test cases
+preconditions(don't care) 
+
+preconditions() 
+
+
+###### 2. Method summary [lsp.test.stateful.DummySuperClass.inv5()]
+2.0. Symbolic return: I
+2.1. Symbolic values: 
+2.2. Preconditions
+2.2.1 Preconditions from virtual methods
+2.3. Postconditions
+2.3.1 Path conditions
+||||0
+
+2.3.2 Generated test cases
+inv5() 0
+
+
+###### 3. Method summary [lsp.test.stateful.DummySuperClass.inv4()]
+3.0. Symbolic return: I
+3.1. Symbolic values: 
+3.2. Preconditions
+3.2.1 Preconditions from virtual methods
+3.3. Postconditions
+3.3.1 Path conditions
+||||0
+
+3.3.2 Generated test cases
+inv4() 0
+
+
+###### 4. Method summary [lsp.test.stateful.DummySuperClass.foo(int,int)]
+4.0. Symbolic return: I
+4.1. Symbolic values: x_2276_SYMINT,y_2277_SYMINT
+4.2. Preconditions
+4.2.1 Preconditions from virtual methods
+4.3. Postconditions
+4.3.1 Path conditions
+parameter instanceof lsp.test.stateful.DummySuperClass && (and ( < ( - 0 x ) y) ( <= x 0 ) )||||x
+parameter instanceof lsp.test.stateful.DummySuperClass && (and ( >= ( - 0 x ) y) ( <= x 0 ) )||||y
+parameter instanceof lsp.test.stateful.DummySuperClass && (and ( < x y) ( > x 0 ) )||||x
+parameter instanceof lsp.test.stateful.DummySuperClass && (and ( >= x y) ( > x 0 ) )||||y
+
+4.3.2 Generated test cases
+foo(don't care,don't care) x
+
+foo(don't care,don't care) y
+
+foo(don't care) x
+
+foo(don't care) y
+
+
+###### 5. Method summary [lsp.test.stateful.DummySubClass.preconditions(lsp.test.stateful.DummyBaseInterface,int)]
+5.0. Symbolic return: V
+5.1. Symbolic values: bi_2260_SYMREF,x_2261_SYMINT
+5.2. Preconditions
+5.2.1 Preconditions from virtual methods
+(and obj_instanceof_lsp_test_stateful_DummyImplementation5 ( > x 9999 ))||||Assert failed
+(and obj_instanceof_lsp_test_stateful_DummyImplementation6 ( >= x 777 ))||||Assert failed
+(and obj_instanceof_lsp_test_stateful_DummyImplementation4 ( >= x 50 ))||||Assert failed
+(and obj_instanceof_lsp_test_stateful_DummyImplementation3 ( < x 0 ))||||Assert failed
+(and obj_instanceof_lsp_test_stateful_DummyImplementation2 ( <= x 100 ))||||Assert failed
+(and obj_instanceof_lsp_test_stateful_DummyImplementation1 ( <= x 0 ))||||Assert failed
+5.3. Postconditions
+5.3.1 Path conditions
+parameter instanceof lsp.test.stateful.DummyImplementation1 && ( > x 0 )
+parameter instanceof lsp.test.stateful.DummyImplementation2 && ( > x 100 )
+parameter instanceof lsp.test.stateful.DummyImplementation3 && ( >= x 0 )
+parameter instanceof lsp.test.stateful.DummyImplementation4 && ( < x 50 )
+parameter instanceof lsp.test.stateful.DummyImplementation5 && ( <= x 9999 )
+parameter instanceof lsp.test.stateful.DummyImplementation6 && ( < x 777 )
+
+5.3.2 Generated test cases
+preconditions(don't care,don't care) 
+
+preconditions(don't care) 
+
+
+###### 6. Method summary [lsp.test.stateful.DummySuperClass.inv3()]
+6.0. Symbolic return: I
+6.1. Symbolic values: 
+6.2. Preconditions
+6.2.1 Preconditions from virtual methods
+6.3. Postconditions
+6.3.1 Path conditions
+||||1
+
+6.3.2 Generated test cases
+inv3() 1
+
+
+###### 7. Method summary [lsp.test.stateful.DummySuperClass.inv8(lsp.test.stateful.DummyImplementation3)]
+7.0. Symbolic return: I
+7.1. Symbolic values: di_2186_SYMREF
+7.2. Preconditions
+7.2.1 Preconditions from virtual methods
+7.3. Postconditions
+7.3.1 Path conditions
+parameter instanceof lsp.test.stateful.DummyImplementation3||||0
+parameter instanceof lsp.test.stateful.DummyImplementation4||||0
+
+7.3.2 Generated test cases
+inv8(don't care) 0
+
+
+###### 8. Method summary [lsp.test.stateful.DummyImplementation4.getResults()]
+8.0. Symbolic return: I
+8.1. Symbolic values: 
+8.2. Preconditions
+8.2.1 Preconditions from virtual methods
+8.3. Postconditions
+8.3.1 Path conditions
+||||100
+
+8.3.2 Generated test cases
+getResults() 100
+
+
+###### 9. Method summary [lsp.test.stateful.DummyConstants.getConfiguration()]
+9.0. Symbolic return: Ljava/lang/Object;
+9.1. Symbolic values: 
+9.2. Preconditions
+9.2.1 Preconditions from virtual methods
+9.3. Postconditions
+9.3.1 Path conditions
+
+
+9.3.2 Generated test cases
+getConfiguration() 
+
+
+###### 10. Method summary [lsp.test.stateful.DummySuperClass.isAlive(int,int)]
+10.0. Symbolic return: I
+10.1. Symbolic values: x_2293_SYMINT,y_2294_SYMINT
+10.2. Preconditions
+10.2.1 Preconditions from virtual methods
+10.3. Postconditions
+10.3.1 Path conditions
+parameter instanceof lsp.test.stateful.DummySuperClass && ( >= x 0 )||||x
+parameter instanceof lsp.test.stateful.DummyImplementation4 && ( < x 0 )||||( - 0 x )
+parameter instanceof lsp.test.stateful.DummySuperClass && ( < x 0 )||||( - 0 x )
+
+10.3.2 Generated test cases
+isAlive(don't care,don't care) x
+
+isAlive(don't care,don't care) ( - 0 x )
+
+isAlive() x
+
+isAlive() ( - 0 x )
+
+
+###### 11. Method summary [lsp.test.stateful.DummyImplementation4.preconditions(int)]
+11.0. Symbolic return: V
+11.1. Symbolic values: x_2257_SYMINT
+11.2. Preconditions
+(and  ( >= x 50 ))||||Assert failed
+11.2.1 Preconditions from virtual methods
+11.3. Postconditions
+11.3.1 Path conditions
+parameter instanceof lsp.test.stateful.DummyImplementation4 && ( < x 50 )
+parameter instanceof lsp.test.stateful.DummyImplementation5 && ( < x 50 )
+
+11.3.2 Generated test cases
+preconditions(don't care) 
+
+preconditions() 
+
+
+###### 12. Method summary [lsp.test.stateful.DummySuperClass.bar(int)]
+12.0. Symbolic return: I
+12.1. Symbolic values: x_2278_SYMINT
+12.2. Preconditions
+12.2.1 Preconditions from virtual methods
+12.3. Postconditions
+12.3.1 Path conditions
+parameter instanceof lsp.test.stateful.DummySuperClass && ( <= x 0 )||||( - 0 x )
+parameter instanceof lsp.test.stateful.DummySuperClass && ( > x 0 )||||x
+
+12.3.2 Generated test cases
+bar(don't care) ( - 0 x )
+
+bar(don't care) x
+
+bar() ( - 0 x )
+
+bar() x
+
+
+###### 13. Method summary [lsp.test.stateful.DummySuperClass.isSet()]
+13.0. Symbolic return: Z
+13.1. Symbolic values: 
+13.2. Preconditions
+13.2.1 Preconditions from virtual methods
+13.3. Postconditions
+13.3.1 Path conditions
+( == input.member 0 )||||0
+(and ( == input.member 100) ( != input.member 0 ) )||||0
+(and ( != input.member 100) ( != input.member 0 ) )||||0
+
+13.3.2 Generated test cases
+isSet() 0
+
+
+###### 14. Method summary [lsp.test.stateful.DummySuperClass.privatePreconditions(int)]
+14.0. Symbolic return: V
+14.1. Symbolic values: x_1007_SYMINT
+14.2. Preconditions
+(and  (and ( > x 1000) (and ( >= x 0) ( == assertion_disabled 0 ) ) ))||||Throws unhandled exception
+14.2.1 Preconditions from virtual methods
+14.3. Postconditions
+14.3.1 Path conditions
+parameter instanceof lsp.test.stateful.DummySuperClass && (and ( <= x 1000) (and ( >= x 0) ( == assertion_disabled 0 ) ) )
+
+14.3.2 Generated test cases
+privatePreconditions() 
+
+
+###### 15. Method summary [lsp.test.stateful.DummyImplementation1.foo()]
+15.0. Symbolic return: V
+15.1. Symbolic values: 
+15.2. Preconditions
+15.2.1 Preconditions from virtual methods
+15.3. Postconditions
+15.3.1 Path conditions
+
+
+15.3.2 Generated test cases
+foo() 
+
+
+###### 16. Method summary [lsp.test.stateful.DummySuperClass.testPreconditions(int)]
+16.0. Symbolic return: I
+16.1. Symbolic values: x_3_SYMINT
+16.2. Preconditions
+(and  (and ( < x 0) ( == assertion_disabled 0 ) ))||||Throws unhandled exception
+(and  (and ( > x 1000) (and ( >= x 0) ( == assertion_disabled 0 ) ) ))||||Throws unhandled exception[inherited]
+16.2.1 Preconditions from virtual methods
+(and obj_instanceof_lsp_test_stateful_DummySuperClass (and ( > x 1000) (and ( >= x 0) ( == assertion_disabled 0 ) ) ))||||Throws unhandled exception
+16.3. Postconditions
+16.3.1 Path conditions
+parameter instanceof lsp.test.stateful.DummySuperClass && (and ( <= x 1000) (and ( >= x 0) ( == assertion_disabled 0 ) ) )||||x
+
+16.3.2 Generated test cases
+testPreconditions() x
+
+
+###### 17. Method summary [lsp.test.stateful.DummySubClass.bar(int)]
+17.0. Symbolic return: I
+17.1. Symbolic values: x_2189_SYMINT
+17.2. Preconditions
+17.2.1 Preconditions from virtual methods
+17.3. Postconditions
+17.3.1 Path conditions
+parameter instanceof lsp.test.stateful.DummySubClass && ( <= x 0 )||||0
+parameter instanceof lsp.test.stateful.DummyImplementation6 && ( > x 0 )||||x
+
+17.3.2 Generated test cases
+bar(don't care) 0
+
+bar(don't care) x
+
+bar() 0
+
+bar() x
+
+
+###### 18. Method summary [lsp.test.stateful.DummySuperClass.getMember()]
+18.0. Symbolic return: I
+18.1. Symbolic values: 
+18.2. Preconditions
+18.2.1 Preconditions from virtual methods
+18.3. Postconditions
+18.3.1 Path conditions
+||||input.member
+
+18.3.2 Generated test cases
+getMember() input.member
+
+
+###### 19. Method summary [lsp.test.stateful.DummyConstants.getValue(int)]
+19.0. Symbolic return: I
+19.1. Symbolic values: x_2018_SYMINT
+19.2. Preconditions
+19.2.1 Preconditions from virtual methods
+19.3. Postconditions
+19.3.1 Path conditions
+parameter instanceof lsp.test.stateful.DummyConstants && (and ( > x 0) ( < x y ) )||||( * x 2 )
+parameter instanceof lsp.test.stateful.DummySuperClass && (and ( <= x 0) ( < x y ) )||||( * x -3 )
+
+19.3.2 Generated test cases
+getValue(don't care) ( * x 2 )
+
+getValue(don't care) ( * x -3 )
+
+getValue() ( * x 2 )
+
+getValue() ( * x -3 )
+
+
+###### 20. Method summary [lsp.test.stateful.DummyImplementation6.preconditions(int)]
+20.0. Symbolic return: V
+20.1. Symbolic values: x_2261_SYMINT
+20.2. Preconditions
+(and  ( >= x 777 ))||||Assert failed
+20.2.1 Preconditions from virtual methods
+20.3. Postconditions
+20.3.1 Path conditions
+parameter instanceof lsp.test.stateful.DummyImplementation6 && ( < x 777 )
+parameter instanceof lsp.test.stateful.DummySubClass && ( < x 777 )
+
+20.3.2 Generated test cases
+preconditions(don't care) 
+
+preconditions() 
+
+
+###### 21. Method summary [lsp.test.stateful.DummySubClass.foo(int,int)]
+21.0. Symbolic return: I
+21.1. Symbolic values: x_2187_SYMINT,y_2188_SYMINT
+21.2. Preconditions
+21.2.1 Preconditions from virtual methods
+21.3. Postconditions
+21.3.1 Path conditions
+parameter instanceof lsp.test.stateful.DummySubClass && (and ( < 0 x) ( <= x 0 ) )||||x
+parameter instanceof lsp.test.stateful.DummyImplementation6 && (and ( >= 0 x) ( <= x 0 ) )||||y
+parameter instanceof lsp.test.stateful.DummyImplementation6 && (and ( < x x) ( > x 0 ) )||||x
+parameter instanceof lsp.test.stateful.DummyImplementation6 && (and ( >= x x) ( > x 0 ) )||||y
+
+21.3.2 Generated test cases
+foo(don't care,don't care) x
+
+foo(don't care,don't care) y
+
+foo() x
+
+foo() y
+
+
+###### 22. Method summary [lsp.test.stateful.DummyImplementation3.getResults()]
+22.0. Symbolic return: I
+22.1. Symbolic values: 
+22.2. Preconditions
+22.2.1 Preconditions from virtual methods
+22.3. Postconditions
+22.3.1 Path conditions
+||||100
+
+22.3.2 Generated test cases
+getResults() 100
+
+
+###### 23. Method summary [lsp.test.stateful.DummySuperClass.inv2()]
+23.0. Symbolic return: I
+23.1. Symbolic values: 
+23.2. Preconditions
+23.2.1 Preconditions from virtual methods
+23.3. Postconditions
+23.3.1 Path conditions
+||||3
+
+23.3.2 Generated test cases
+inv2() 3
+
+
+###### 24. Method summary [lsp.test.stateful.DummyImplementation1.getResults()]
+24.0. Symbolic return: I
+24.1. Symbolic values: 
+24.2. Preconditions
+24.2.1 Preconditions from virtual methods
+24.3. Postconditions
+24.3.1 Path conditions
+||||0
+
+24.3.2 Generated test cases
+getResults() 0
+
+
+###### 25. Method summary [lsp.test.stateful.DummyConstants.computeScore(int,int)]
+25.0. Symbolic return: I
+25.1. Symbolic values: x_2016_SYMINT,y_2017_SYMINT
+25.2. Preconditions
+25.2.1 Preconditions from virtual methods
+25.3. Postconditions
+25.3.1 Path conditions
+parameter instanceof lsp.test.stateful.DummyConstants && (and ( > x 0) ( < x y ) )||||( + y x )
+parameter instanceof lsp.test.stateful.DummySuperClass && (and ( <= x 0) ( < x y ) )||||( + y x )
+parameter instanceof lsp.test.stateful.DummySuperClass && ( >= x y )||||( + y x )
+
+25.3.2 Generated test cases
+computeScore(don't care,don't care) ( + y x )
+
+computeScore() ( + y x )
+
+
+###### 26. Method summary [lsp.test.stateful.DummyConstants.doSomething()]
+26.0. Symbolic return: V
+26.1. Symbolic values: 
+26.2. Preconditions
+26.2.1 Preconditions from virtual methods
+26.3. Postconditions
+26.3.1 Path conditions
+
+
+26.3.2 Generated test cases
+doSomething() 
+
+
+###### 27. Method summary [lsp.test.stateful.DummySuperClass.inv7(lsp.test.stateful.DummyInterface)]
+27.0. Symbolic return: I
+27.1. Symbolic values: di_2184_SYMREF
+27.2. Preconditions
+27.2.1 Preconditions from virtual methods
+27.3. Postconditions
+27.3.1 Path conditions
+parameter instanceof lsp.test.stateful.DummyImplementation1||||0
+parameter instanceof lsp.test.stateful.DummyImplementation2||||1
+parameter instanceof lsp.test.stateful.DummyImplementation3||||100
+parameter instanceof lsp.test.stateful.DummyImplementation4||||100
+
+27.3.2 Generated test cases
+inv7(don't care) 0
+
+inv7(don't care) 1
+
+inv7(don't care) 100
+
+
+###### 28. Method summary [lsp.test.stateful.DummyImplementation5.preconditions(int)]
+28.0. Symbolic return: V
+28.1. Symbolic values: x_2259_SYMINT
+28.2. Preconditions
+(and  ( > x 9999 ))||||Assert failed
+28.2.1 Preconditions from virtual methods
+28.3. Postconditions
+28.3.1 Path conditions
+parameter instanceof lsp.test.stateful.DummyImplementation5 && ( <= x 9999 )
+parameter instanceof lsp.test.stateful.DummyImplementation6 && ( <= x 9999 )
+
+28.3.2 Generated test cases
+preconditions(don't care) 
+
+preconditions() 
+
+
+###### 29. Method summary [lsp.test.stateful.DummySuperClass.preconditions(int,int)]
+29.0. Symbolic return: V
+29.1. Symbolic values: x_1_SYMINT,y_2_SYMINT
+29.2. Preconditions
+(and  (and ( <= x 100) (and ( <= x 1000) (and ( >= x 0) ( == assertion_disabled 0 ) ) ) ))||||Assert failed
+(and  (and ( < x 0) ( == assertion_disabled 0 ) ))||||Throws unhandled exception[inherited]
+(and  (and ( > x 1000) (and ( >= x 0) ( == assertion_disabled 0 ) ) ))||||Throws unhandled exception[inherited]
+29.2.1 Preconditions from virtual methods
+(and obj_instanceof_lsp_test_stateful_DummySuperClass (and ( < x 0) ( == assertion_disabled 0 ) ))||||Throws unhandled exception
+(and obj_instanceof_lsp_test_stateful_DummySuperClass (and ( > x 1000) (and ( >= x 0) ( == assertion_disabled 0 ) ) ))||||Throws unhandled exception[inherited]
+29.3. Postconditions
+29.3.1 Path conditions
+parameter instanceof lsp.test.stateful.DummySuperClass && (and ( > x 100) (and ( <= x 1000) (and ( >= x 0) ( == assertion_disabled 0 ) ) ) )
+parameter instanceof lsp.test.stateful.DummySuperClass && ( != assertion_disabled 0 )
+
+29.3.2 Generated test cases
+preconditions(don't care,don't care) 
+
+
+###### 30. Method summary [lsp.test.stateful.DummyImplementation1.preconditions(int)]
+30.0. Symbolic return: V
+30.1. Symbolic values: x_2251_SYMINT
+30.2. Preconditions
+(and  ( <= x 0 ))||||Assert failed
+30.2.1 Preconditions from virtual methods
+30.3. Postconditions
+30.3.1 Path conditions
+parameter instanceof lsp.test.stateful.DummyImplementation1 && ( > x 0 )
+parameter instanceof lsp.test.stateful.DummyImplementation2 && ( > x 0 )
+
+30.3.2 Generated test cases
+preconditions(don't care) 
+
+preconditions() 
+
+
+###### 31. Method summary [lsp.test.stateful.DummyImplementation2.preconditions(int)]
+31.0. Symbolic return: V
+31.1. Symbolic values: x_2253_SYMINT
+31.2. Preconditions
+(and  ( <= x 100 ))||||Assert failed
+31.2.1 Preconditions from virtual methods
+31.3. Postconditions
+31.3.1 Path conditions
+parameter instanceof lsp.test.stateful.DummyImplementation2 && ( > x 100 )
+parameter instanceof lsp.test.stateful.DummyImplementation3 && ( > x 100 )
+
+31.3.2 Generated test cases
+preconditions(don't care) 
+
+preconditions() 
+
+
+###### 32. Method summary [lsp.test.stateful.DummySuperClass.inv1()]
+32.0. Symbolic return: I
+32.1. Symbolic values: 
+32.2. Preconditions
+32.2.1 Preconditions from virtual methods
+32.3. Postconditions
+32.3.1 Path conditions
+||||4
+
+32.3.2 Generated test cases
+inv1() 4
+
+
+###### 33. Method summary [lsp.test.stateful.DummySuperClass.isAlive()]
+33.0. Symbolic return: Z
+33.1. Symbolic values: 
+33.2. Preconditions
+33.2.1 Preconditions from virtual methods
+33.3. Postconditions
+33.3.1 Path conditions
+( == input.member 0 )||||1
+( != input.member 0 )||||0
+
+33.3.2 Generated test cases
+isAlive() 1
+
+isAlive() 0
+
+
+###### 34. Method summary [lsp.test.stateful.DummySuperClass.inv6()]
+34.0. Symbolic return: Ljava/lang/String;
+34.1. Symbolic values: 
+34.2. Preconditions
+34.2.1 Preconditions from virtual methods
+34.3. Postconditions
+34.3.1 Path conditions
+(and ( > x 0) ( < x y ) )
+(and ( <= x 0) ( < x y ) )
+( >= x y )
+
+34.3.2 Generated test cases
+inv6() 
+
+
+###### 35. Method summary [lsp.test.stateful.DummyImplementation2.getResults()]
+35.0. Symbolic return: I
+35.1. Symbolic values: 
+35.2. Preconditions
+35.2.1 Preconditions from virtual methods
+35.3. Postconditions
+35.3.1 Path conditions
+||||1
+
+35.3.2 Generated test cases
+getResults() 1
+
+
+###### Constant Methods
+lsp.test.stateful.DummyImplementation1
+lsp.test.stateful.DummyImplementation1.postconditions(I)I
+lsp.test.stateful.DummyImplementation3
+lsp.test.stateful.DummyImplementation3.getResults()I
+lsp.test.stateful.DummyImplementation3.postconditions(I)I
+lsp.test.stateful.DummySubClass
+lsp.test.stateful.DummySubClass.foo(II)I
+lsp.test.stateful.DummySubClass.postconditions(Llsp/test/stateful/DummyBaseInterface;I)I
+lsp.test.stateful.DummySuperClass
+lsp.test.stateful.DummySuperClass.foo(II)I
+lsp.test.stateful.DummySuperClass.isAlive()Z
+lsp.test.stateful.DummySuperClass.isAlive(II)I
+lsp.test.stateful.DummySuperClass.getMember()I
+lsp.test.stateful.DummySuperClass.toString()Ljava/lang/String;
+lsp.test.stateful.DummySuperClass.inv4()I
+lsp.test.stateful.DummySuperClass.inv6()Ljava/lang/String;
+lsp.test.stateful.DummySuperClass.inv8(Llsp/test/stateful/DummyImplementation3;)I
+lsp.test.stateful.DummyImplementation6
+lsp.test.stateful.DummyImplementation4
+lsp.test.stateful.DummyImplementation4.getResults()I
+lsp.test.stateful.DummyImplementation4.postconditions(I)I
+lsp.test.stateful.DummyImplementation5
+lsp.test.stateful.DummyImplementation5.postconditions(I)I
+lsp.test.stateful.DummyImplementation2
+lsp.test.stateful.DummyImplementation2.bar()I
+lsp.test.stateful.DummyImplementation2.postconditions(I)I
+lsp.test.stateful.DummyConstants
+lsp.test.stateful.DummyConstants.getConfiguration()Ljava/lang/Object;
+lsp.test.stateful.DummyConstants.computeScore(II)I

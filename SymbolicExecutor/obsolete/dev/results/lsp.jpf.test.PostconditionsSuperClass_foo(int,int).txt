@@ -1,0 +1,23 @@
+[Method summary]
+Symbolic values: x_1_SYMINT,y_2_SYMINT
+
+<preconditions>
+</preconditions>
+
+<postconditions>
+    <pathconditions>
+# = 1
+(y_2_SYMINT[-9999] + x_1_SYMINT[10000]) > CONST_0
+SPC # = 0 # = 1
+(y_2_SYMINT[-10000] + x_1_SYMINT[-10000]) <= CONST_0
+SPC # = 0 
+    </pathconditions>
+    <testcases>
+
+foo(10000,-9999)  --> ((CONST_1 - x_1_SYMINT) * CONST_2)
+foo(-10000,-10000)  --> ((y_2_SYMINT + x_1_SYMINT) * CONST_2)
+    </testcases>
+</postconditions>
+
+<invariants>
+</invariants>

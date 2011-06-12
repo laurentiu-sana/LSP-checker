@@ -1,0 +1,15 @@
+lsp.tests.LSPCheckerGeneratedTestDUMMY
+<lsp.test.dummy.DummyTest: int computeArea(lsp.test.dummy.Rectangle,int,int)> scored 2.0
+<lsp.test.dummy.DummyTest: void <init>()> scored 0.0
+<lsp.test.dummy.Square: void <init>()> scored 0.0
+<lsp.test.dummy.Square: void setWidth(int)> scored 0.0
+<lsp.test.dummy.Square: int getWidth()> scored 0.0
+<lsp.test.dummy.Square: void setHeight(int)> scored 0.0
+<lsp.test.dummy.Square: int getHeight()> scored 0.0
+<lsp.test.dummy.Square: int getArea()> scored 0.0
+<lsp.test.dummy.Rectangle: void <init>()> scored 0.0
+<lsp.test.dummy.Rectangle: void setWidth(int)> scored 0.0
+<lsp.test.dummy.Rectangle: int getWidth()> scored 0.0
+<lsp.test.dummy.Rectangle: void setHeight(int)> scored 0.0
+<lsp.test.dummy.Rectangle: int getHeight()> scored 0.0
+<lsp.test.dummy.Rectangle: int getArea()> scored 0.0

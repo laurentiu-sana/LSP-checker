@@ -1,0 +1,15 @@
+lsp.tests.LSPCheckerGeneratedTestSAV
+<lsp.test.sav.Subclass: void <init>()> scored 0.0
+<lsp.test.sav.Subclass: void precond1(int)> scored 0.0
+<lsp.test.sav.Subclass: void precond2(int,int)> scored 0.0
+<lsp.test.sav.Subclass: void precond3(int)> scored 0.0
+<lsp.test.sav.Subclass: int postcond1(int,int)> scored 0.0
+<lsp.test.sav.Subclass: int postcond2(int)> scored 0.0
+<lsp.test.sav.Subclass: int postcond3(int)> scored 0.0
+<lsp.test.sav.Superclass: void <init>()> scored 0.0
+<lsp.test.sav.Superclass: void precond1(int)> scored 0.0
+<lsp.test.sav.Superclass: void precond2(int,int)> scored 0.0
+<lsp.test.sav.Superclass: void precond3(int)> scored 0.0
+<lsp.test.sav.Superclass: int postcond1(int,int)> scored 0.0
+<lsp.test.sav.Superclass: int postcond2(int)> scored 0.0
+<lsp.test.sav.Superclass: int postcond3(int)> scored 0.0

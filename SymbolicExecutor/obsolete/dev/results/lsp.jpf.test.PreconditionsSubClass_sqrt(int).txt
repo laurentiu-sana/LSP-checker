@@ -1,0 +1,36 @@
+[Method summary]
+Symbolic values: x_1_SYMINT
+
+<preconditions>
+Class: ClassInfo[name=lsp.jpf.test.PreconditionsSubClass]
+    Method: MethodInfo[lsp.jpf.test.PreconditionsSubClass.sqrt(I)I]
+
+        Exception: # = 2
+x_1_SYMINT[25] < CONST_10 &&
+(x_1_SYMINT[25] + x_1_SYMINT[25]) < CONST_50
+SPC # = 0
+
+        Exception: # = 3
+x_1_SYMINT[25] > CONST_5 &&
+x_1_SYMINT[25] >= CONST_10 &&
+(x_1_SYMINT[25] + x_1_SYMINT[25]) < CONST_50
+SPC # = 0
+
+
+</preconditions>
+
+<postconditions>
+    <pathconditions>
+# = 2
+REAL_12570890[25.0] == x_1_SYMINT[25] &&
+(x_1_SYMINT[25] + x_1_SYMINT[25]) >= CONST_50
+SPC # = 0 
+    </pathconditions>
+    <testcases>
+
+sqrt(25)  --> 0
+    </testcases>
+</postconditions>
+
+<invariants>
+</invariants>

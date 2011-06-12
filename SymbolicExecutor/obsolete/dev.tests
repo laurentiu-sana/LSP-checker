@@ -1,0 +1,21 @@
+#lsp.jpf.test.InvariantsSubClass invariants(sym#sym)
+#lsp.jpf.test.InvariantsSuperClass invariants(sym#sym)
+#lsp.jpf.test.PreconditionsSubClass sqrt(sym)
+#lsp.jpf.test.PreconditionsSuperClass sqrt(sym)
+#lsp.jpf.test.PostconditionsSuperClass foo(sym#sym)
+#lsp.jpf.test.PostconditionsSubClass foo(sym#sym)
+
+#lsp.jpf.test.dummy.DummySuperClass preconditions(sym)
+#lsp.jpf.test.dummy.DummySuperClass postconditions(sym#sym)
+#lsp.jpf.test.dummy.DummySuperClass invariants(sym)
+
+#lsp.jpf.test.dummy.DummySubClass preconditions(sym)
+#lsp.jpf.test.dummy.DummySubClass postconditions(sym#sym)
+#lsp.jpf.test.dummy.DummySubClass invariants(sym)
+
+####################################################
+# Optionally, specify the list of symbolic classes #
+####################################################
+
+# Stateful classes
+lsp.jpf.test.stateful.dummy.DummySuperClass isAlive(),isSet(),getMember(),toString(),inv1(),inv2(),inv3(),inv4(),inv5()

@@ -1,0 +1,121 @@
+<project name="SymbolicExecutor" basedir="." default="main">
+	<property name="base.dir" value="." />
+	<property name="src.dir" value="src" />
+	<property name="build.dir" value="build" />
+	<property name="classes.dir" value="${build.dir}/classes" />
+	<property name="jar.dir" value="${build.dir}/jar" />
+	<property name="lib.dir" value="lib" />
+	<property name="reports.class" value="lsp.jpf.parse.ReportsLoader" />
+	<property name="xml.class" value="lsp.jpf.parse.XMLConfigurationGenerator" />
+	<property name="main.class" value="lsp.jpf.launchers.LSPCheckerLauncher" />
+	<property name="analyzer.class" value="lsp.jpf.results.analyzer.ResultsAnalyzer" />
+
+	<property name="tests.class" value="lsp.jpf.launchers.LSPCheckerLauncher" />
+	<property name="dummy-test.class" value="lsp.jpf.scs.DummyTest" />
+
+	<property name="config.dir" value="config" />
+
+    <property name="jpf-core" value="../../jpf-mercurial/jpf-core" />
+    <property name="jpf-symbc" value="../../jpf-mercurial/jpf-symbc" />
+
+	<path id="jpf.lib.path">
+
+        <fileset dir="${jpf-symbc}/build" includes="**/*.jar" />
+        <fileset dir="${jpf-symbc}/lib" includes="**/*.jar" />
+        <fileset dir="${jpf-core}/build" includes="**/*.jar" />
+	</path>
+
+	<path id="classpath">
+		<!-- Local libraries and configuration files -->
+		<fileset dir="${lib.dir}" includes="**/*.jar" />
+		<path location="${build.dir}" />
+		<path location="${config.dir}" />
+		<fileset dir="tests/jar/" includes="**/*.jar" />
+
+		<!-- JPF specific information included -->
+		<path refid="jpf.lib.path" />
+	</path>
+
+	<target name="clean">
+		<delete dir="${build.dir}" />
+	</target>
+
+	<target name="compile">
+		<mkdir dir="${classes.dir}" />
+		<javac srcdir="${src.dir}" destdir="${classes.dir}" classpathref="classpath" debug="on" />
+	</target>
+
+	<target name="jar">
+		<mkdir dir="${jar.dir}" />
+		<jar destfile="${jar.dir}/${ant.project.name}.jar" basedir="${classes.dir}">
+			<manifest>
+				<attribute name="Main-Class" value="${main.class}" />
+			</manifest>
+		</jar>
+	</target>
+
+	<target name="generateXML" depends="jar">
+		<java fork="true" classname="${xml.class}">
+			<arg value="${report.file}" />
+			<classpath>
+				<path refid="classpath" />
+				<path location="${jar.dir}/${ant.project.name}.jar" />
+			</classpath>
+		</java>
+	</target>
+
+	<target name="run" depends="jar">
+		<java fork="true" classname="${main.class}">
+			<arg value="${config.file}" />
+			<classpath>
+				<path refid="classpath" />
+				<path location="${jar.dir}/${ant.project.name}.jar" />
+			</classpath>
+		</java>
+	</target>
+
+	<target name="analyze-results" depends="jar">
+		<java fork="true" classname="${analyzer.class}">
+			<classpath>
+				<path refid="classpath" />
+				<path location="${jar.dir}/${ant.project.name}.jar" />
+			</classpath>
+		</java>
+	</target>
+
+	<target name="tests" depends="jar">
+		<junit>
+			<classpath>
+				<path refid="classpath" />
+				<path location="${jar.dir}/${ant.project.name}.jar" />
+			</classpath>
+
+			<formatter type="brief" usefile="false" />
+			<test name="${tests.class}" />
+		</junit>
+	</target>
+
+	<target name="test" depends="jar">
+		<java fork="true" classname="${test.class}">
+			<classpath>
+				<path refid="classpath" />
+				<path location="${jar.dir}/${ant.project.name}.jar" />
+			</classpath>
+		</java>
+	</target>
+
+	<target name="dummy-test" depends="jar">
+		<junit>
+			<classpath>
+				<path refid="classpath" />
+				<path location="${jar.dir}/${ant.project.name}.jar" />
+			</classpath>
+
+			<formatter type="brief" usefile="false" />
+			<test name="${dummy-test.class}" />
+		</junit>
+	</target>
+
+	<target name="main" depends="compile, jar" />
+
+</project>

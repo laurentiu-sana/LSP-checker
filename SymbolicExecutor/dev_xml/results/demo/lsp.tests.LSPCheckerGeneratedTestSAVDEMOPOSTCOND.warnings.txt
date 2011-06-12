@@ -1,0 +1,16 @@
+[WARNING] {different postconditions}
+    lsp.test.savdemopostcond.SuperClass vs lsp.test.savdemopostcond.SubClass :: postcond
+    SUPERCLASS: 
+(and parameter instanceof lsp.test.savdemopostcond.SubClass ( >= x 0 ) )||||( + x 1 )
+(and parameter instanceof lsp.test.savdemopostcond.SuperClass ( < x 0 ) )||||( + ( - 0 x ) 1 )
+
+    SUBCLASS: 
+(and parameter instanceof lsp.test.savdemopostcond.SubClass ( >= x 0 ) )||||x
+(and parameter instanceof lsp.test.savdemopostcond.SubClass ( < x 0 ) )||||( - 0 x )
+    Z3: 
+(define parameter_instanceof_lsp_test_savdemopostcond_SuperClass false)
+(define parameter_instanceof_lsp_test_savdemopostcond_SubClass true)
+(define xsub 0)
+sat
+[stderr] fixme:heap:HeapSetInformation (nil) 1 (nil) 0
+

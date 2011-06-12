@@ -1,0 +1,153 @@
+Generating report for the entry point lsp.tests.LSPCheckerGeneratedTestSAV.main
+
+###### 1. Method summary [lsp.test.sav.Superclass.precond2(int,int)]
+1.0. Symbolic return: V
+1.1. Symbolic values: x_283_SYMINT,y_284_SYMINT
+1.2. Preconditions
+(and  ( < ( * x 2 ) y ))||||Throws unhandled exception
+(and  (and ( > ( + x 1 ) ( - y 10 )) ( >= ( * x 2 ) y ) ))||||Throws unhandled exception
+1.2.1 Preconditions from virtual methods
+1.3. Postconditions
+1.3.1 Path conditions
+parameter instanceof lsp.test.sav.Subclass && (and ( <= ( + x 1 ) ( - y 10 )) ( >= ( * x 2 ) y ) )
+
+1.3.2 Generated test cases
+precond2(don't care,don't care) 
+
+precond2() 
+
+
+###### 2. Method summary [lsp.test.sav.Subclass.precond3(int)]
+2.0. Symbolic return: V
+2.1. Symbolic values: x_563_SYMINT
+2.2. Preconditions
+(and  ( == x 0 ))||||Throws unhandled exception
+2.2.1 Preconditions from virtual methods
+2.3. Postconditions
+2.3.1 Path conditions
+parameter instanceof lsp.test.sav.Subclass && ( != x 0 )
+
+2.3.2 Generated test cases
+precond3(don't care) 
+
+precond3() 
+
+
+###### 3. Method summary [lsp.test.sav.Superclass.postcond2(int)]
+3.0. Symbolic return: I
+3.1. Symbolic values: x_519_SYMINT
+3.2. Preconditions
+3.2.1 Preconditions from virtual methods
+3.3. Postconditions
+3.3.1 Path conditions
+parameter instanceof lsp.test.sav.Superclass && ( < x 0 )||||( - 0 x )
+parameter instanceof lsp.test.sav.Subclass && ( >= x 0 )||||x
+
+3.3.2 Generated test cases
+postcond2(don't care) ( - 0 x )
+
+postcond2(don't care) x
+
+postcond2() ( - 0 x )
+
+postcond2() x
+
+
+###### 4. Method summary [lsp.test.sav.Subclass.precond1(int)]
+4.0. Symbolic return: V
+4.1. Symbolic values: x_557_SYMINT
+4.2. Preconditions
+(and  ( < x 10 ))||||Throws unhandled exception
+4.2.1 Preconditions from virtual methods
+4.3. Postconditions
+4.3.1 Path conditions
+parameter instanceof lsp.test.sav.Subclass && ( >= x 10 )
+
+4.3.2 Generated test cases
+precond1(don't care) 
+
+precond1() 
+
+
+###### 5. Method summary [lsp.test.sav.Superclass.postcond1(int,int)]
+5.0. Symbolic return: I
+5.1. Symbolic values: x_472_SYMINT,y_473_SYMINT
+5.2. Preconditions
+5.2.1 Preconditions from virtual methods
+5.3. Postconditions
+5.3.1 Path conditions
+parameter instanceof lsp.test.sav.Superclass && ( > ( - x y ) 0 )||||y
+parameter instanceof lsp.test.sav.Subclass && ( <= ( - x y ) 0 )||||x
+
+5.3.2 Generated test cases
+postcond1(don't care,don't care) y
+
+postcond1(don't care,don't care) x
+
+postcond1() y
+
+postcond1() x
+
+
+###### 6. Method summary [lsp.test.sav.Superclass.postcond3(int)]
+6.0. Symbolic return: I
+6.1. Symbolic values: x_542_SYMINT
+6.2. Preconditions
+6.2.1 Preconditions from virtual methods
+6.3. Postconditions
+6.3.1 Path conditions
+parameter instanceof lsp.test.sav.Superclass && ( < x 0 )||||( + ( - 0 x ) 10 )
+parameter instanceof lsp.test.sav.Subclass && (and ( < x 10) ( >= x 0 ) )||||( + x 15 )
+parameter instanceof lsp.test.sav.Subclass && (and ( >= x 10) ( >= x 0 ) )||||( + x 100 )
+
+6.3.2 Generated test cases
+postcond3(don't care) ( + ( - 0 x ) 10 )
+
+postcond3(don't care) ( + x 15 )
+
+postcond3(don't care) ( + x 100 )
+
+postcond3() ( + ( - 0 x ) 10 )
+
+postcond3() ( + x 15 )
+
+postcond3() ( + x 100 )
+
+
+###### 7. Method summary [lsp.test.sav.Subclass.precond2(int,int)]
+7.0. Symbolic return: V
+7.1. Symbolic values: x_561_SYMINT,y_562_SYMINT
+7.2. Preconditions
+(and  )||||Throws unhandled exception
+7.2.1 Preconditions from virtual methods
+7.3. Postconditions
+###### 8. Method summary [lsp.test.sav.Superclass.precond3(int)]
+8.0. Symbolic return: V
+8.1. Symbolic values: x_471_SYMINT
+8.2. Preconditions
+(and  )||||Throws unhandled exception
+8.2.1 Preconditions from virtual methods
+8.3. Postconditions
+###### 9. Method summary [lsp.test.sav.Superclass.precond1(int)]
+9.0. Symbolic return: V
+9.1. Symbolic values: x_1_SYMINT
+9.2. Preconditions
+(and  ( < x 0 ))||||Throws unhandled exception
+9.2.1 Preconditions from virtual methods
+9.3. Postconditions
+9.3.1 Path conditions
+parameter instanceof lsp.test.sav.Subclass && ( >= x 0 )
+
+9.3.2 Generated test cases
+precond1() 
+
+
+###### Constant Methods
+lsp.test.sav.Subclass
+lsp.test.sav.Subclass.postcond1(II)I
+lsp.test.sav.Subclass.postcond2(I)I
+lsp.test.sav.Subclass.postcond3(I)I
+lsp.test.sav.Superclass
+lsp.test.sav.Superclass.postcond1(II)I
+lsp.test.sav.Superclass.postcond2(I)I
+lsp.test.sav.Superclass.postcond3(I)I

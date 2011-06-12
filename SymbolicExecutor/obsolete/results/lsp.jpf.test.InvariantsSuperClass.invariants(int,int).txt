@@ -1,0 +1,11 @@
+Symbolic values: x_1_SYMINT,y_2_SYMINT
+
+invariants(-10000,-10000)  --> 0
+invariants(-10000,0)  --> 0
+
+= Invariants =
+Class: lsp.jpf.test.InvariantsSuperClass
+    lsp.jpf.test.InvariantsSuperClass.isSet
+    lsp.jpf.test.InvariantsSuperClass.instanceOk
+    lsp.jpf.test.InvariantsSuperClass.isSetFake
+    lsp.jpf.test.InvariantsSuperClass.getMember

@@ -1,0 +1,213 @@
+Generating report for the entry point lsp.tests.LSPCheckerGeneratedTestSTATELESS.main
+
+###### 1. Method summary [lsp.test.stateless.DummySubClass.isSetFake()]
+1.0. Symbolic return: Z
+1.1. Symbolic values: 
+1.2. Preconditions
+1.2.1 Preconditions from virtual methods
+1.3. Postconditions
+1.3.1 Path conditions
+||||0
+
+1.3.2 Generated test cases
+isSetFake() 0
+
+
+###### 2. Method summary [lsp.test.stateless.DummySubClass.postconditions(int,int)]
+2.0. Symbolic return: I
+2.1. Symbolic values: x_283_SYMINT,y_284_SYMINT
+2.2. Preconditions
+2.2.1 Preconditions from virtual methods
+2.3. Postconditions
+2.3.1 Path conditions
+parameter instanceof lsp.test.stateless.DummySubClass && ( > x y )||||( * x x )
+parameter instanceof lsp.test.stateless.DummySuperClass && ( <= x y )||||( * y y )
+
+2.3.2 Generated test cases
+postconditions(don't care,don't care) ( * x x )
+
+postconditions(don't care,don't care) ( * y y )
+
+postconditions() ( * x x )
+
+postconditions() ( * y y )
+
+
+###### 3. Method summary [lsp.test.stateless.DummySuperClass.isSetFake()]
+3.0. Symbolic return: Z
+3.1. Symbolic values: 
+3.2. Preconditions
+3.2.1 Preconditions from virtual methods
+3.3. Postconditions
+3.3.1 Path conditions
+( == input.member 0 )||||1
+( != input.member 0 )||||0
+
+3.3.2 Generated test cases
+isSetFake() 1
+
+isSetFake() 0
+
+
+###### 4. Method summary [lsp.test.stateless.DummySubClass.preconditions(int)]
+4.0. Symbolic return: I
+4.1. Symbolic values: x_288_SYMINT
+4.2. Preconditions
+(and  ( < x 10 ))||||Throws unhandled exception
+4.2.1 Preconditions from virtual methods
+4.3. Postconditions
+4.3.1 Path conditions
+parameter instanceof lsp.test.stateless.DummySuperClass && ( >= x 10 )||||x
+
+4.3.2 Generated test cases
+preconditions(don't care) x
+
+preconditions() x
+
+
+###### 5. Method summary [lsp.test.stateless.DummySuperClass.getMember()]
+5.0. Symbolic return: I
+5.1. Symbolic values: 
+5.2. Preconditions
+5.2.1 Preconditions from virtual methods
+5.3. Postconditions
+5.3.1 Path conditions
+||||input.member
+
+5.3.2 Generated test cases
+getMember() input.member
+
+
+###### 6. Method summary [lsp.test.stateless.DummySubClass.isSet()]
+6.0. Symbolic return: Z
+6.1. Symbolic values: 
+6.2. Preconditions
+6.2.1 Preconditions from virtual methods
+6.3. Postconditions
+6.3.1 Path conditions
+||||1
+
+6.3.2 Generated test cases
+isSet() 1
+
+
+###### 7. Method summary [lsp.test.stateless.DummySuperClass.postconditions(int,int)]
+7.0. Symbolic return: I
+7.1. Symbolic values: x_255_SYMINT,y_256_SYMINT
+7.2. Preconditions
+7.2.1 Preconditions from virtual methods
+7.3. Postconditions
+7.3.1 Path conditions
+parameter instanceof lsp.test.stateless.DummySuperClass && ( > x y )||||( * x 2 )
+parameter instanceof lsp.test.stateless.DummySuperClass && ( <= x y )||||( * y 2 )
+
+7.3.2 Generated test cases
+postconditions(don't care,don't care) ( * x 2 )
+
+postconditions(don't care,don't care) ( * y 2 )
+
+postconditions() ( * x 2 )
+
+postconditions() ( * y 2 )
+
+
+###### 8. Method summary [lsp.test.stateless.DummySuperClass.isSet()]
+8.0. Symbolic return: Z
+8.1. Symbolic values: 
+8.2. Preconditions
+8.2.1 Preconditions from virtual methods
+8.3. Postconditions
+8.3.1 Path conditions
+( == input.member 0 )||||1
+( != input.member 0 )||||0
+
+8.3.2 Generated test cases
+isSet() 1
+
+isSet() 0
+
+
+###### 9. Method summary [lsp.test.stateless.DummySuperClass.preconditions(int)]
+9.0. Symbolic return: I
+9.1. Symbolic values: x_290_SYMINT
+9.2. Preconditions
+(and  ( < x 0 ))||||Throws unhandled exception
+(and  (and ( > x 100) ( >= x 0 ) ))||||Throws unhandled exception
+(and  (and ( <= x 50) (and ( == assertion_disabled 0) (and ( <= x 100) ( >= x 0 ) ) ) ))||||Assert failed
+(and  (and ( > x 30) (and ( > x 50) (and ( == assertion_disabled 0) (and ( <= x 100) ( >= x 0 ) ) ) ) ))||||Throws unhandled exception
+(and  (and ( > x 30) (and ( != assertion_disabled 0) (and ( <= x 100) ( >= x 0 ) ) ) ))||||Throws unhandled exception
+9.2.1 Preconditions from virtual methods
+9.3. Postconditions
+9.3.1 Path conditions
+parameter instanceof lsp.test.stateless.DummySuperClass && (and ( <= x 30) (and ( != assertion_disabled 0) (and ( <= x 100) ( >= x 0 ) ) ) )||||x
+
+9.3.2 Generated test cases
+preconditions(don't care) x
+
+preconditions() x
+
+
+###### 10. Method summary [lsp.test.stateless.DummySubClass.getMember()]
+10.0. Symbolic return: I
+10.1. Symbolic values: 
+10.2. Preconditions
+10.2.1 Preconditions from virtual methods
+10.3. Postconditions
+10.3.1 Path conditions
+||||0
+
+10.3.2 Generated test cases
+getMember() 0
+
+
+###### 11. Method summary [lsp.test.stateless.DummySubClass.invariants(int)]
+11.0. Symbolic return: I
+11.1. Symbolic values: x_146_SYMINT
+11.2. Preconditions
+11.2.1 Preconditions from virtual methods
+11.3. Postconditions
+11.3.1 Path conditions
+parameter instanceof lsp.test.stateless.DummySubClass && ( > ( + x x ) 100 )||||x
+parameter instanceof lsp.test.stateless.DummySuperClass && ( <= ( + x x ) 100 )||||0
+
+11.3.2 Generated test cases
+invariants(don't care) x
+
+invariants(don't care) 0
+
+invariants() x
+
+invariants() 0
+
+
+###### 12. Method summary [lsp.test.stateless.DummySuperClass.invariants(int)]
+12.0. Symbolic return: I
+12.1. Symbolic values: x_274_SYMINT
+12.2. Preconditions
+12.2.1 Preconditions from virtual methods
+12.3. Postconditions
+12.3.1 Path conditions
+parameter instanceof lsp.test.stateless.DummySuperClass && ( > x 0 )||||0
+parameter instanceof lsp.test.stateless.DummySuperClass && ( <= x 0 )||||( + x x )
+
+12.3.2 Generated test cases
+invariants(don't care) 0
+
+invariants(don't care) ( + x x )
+
+invariants() 0
+
+invariants() ( + x x )
+
+
+###### Constant Methods
+lsp.test.stateless.DummySubClass
+lsp.test.stateless.DummySubClass.preconditions(I)I
+lsp.test.stateless.DummySubClass.postconditions(II)I
+lsp.test.stateless.DummySubClass.getMember()I
+lsp.test.stateless.DummySuperClass
+lsp.test.stateless.DummySuperClass.preconditions(I)I
+lsp.test.stateless.DummySuperClass.postconditions(II)I
+lsp.test.stateless.DummySuperClass.isSet()Z
+lsp.test.stateless.DummySuperClass.getMember()I
+lsp.test.stateless.DummySuperClass.isSetFake()Z

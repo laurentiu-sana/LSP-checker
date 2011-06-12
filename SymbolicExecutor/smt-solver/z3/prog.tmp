@@ -1,0 +1,28 @@
+(benchmark sav11
+  :logic AUFNIRA
+  :status unknown
+  :extrasorts ( Ref )
+  :extrafuns ( (assertion_disabled Int) )
+  :extrafuns (  ( x Int )  )
+  :extrafuns (  )
+  :extrafuns (  )
+  :extrafuns (  ( ! Int )  ( * Int )  )
+  :formula
+    (or  
+     (not (implies (not (and  ( < x 10 ))) (not (and  ( < x 1000 )))) )
+
+     ;(not (implies (not (and  (and ( < x 10) ( = x 55 ) ))) (not (and  (and ( < x 1000) ( = x 55 ) )))) )  
+     ;(not (implies (not (and  (and ( < x 10) ( = x 55 ) ))) (not (and  ( < x 1000 )))) )  
+     ;(not (implies (not (and  (and ( < x 10) ( = x 55 ) ))) (not (and  (and ( < x 1000) (and ( < ( * x 3 ) 0) ( (not ( =  x 55  ) )) ) )))) )  
+     
+     ;(not (implies (not (and  (and ( < x 10) (and ( < ( * x 3 ) 0) ( (not ( =  x 55  ) )) ) ))) (not (and  (and ( < x 1000) ( = x 55 ) )))) )  
+     
+     ;(not (implies (not (and  (and ( < x 10) (and ( < ( * x 3 ) 0) ( (not ( =  x 55  ) )) ) ))) (not (and  ( < x 1000 )))) )  
+     
+     (not (implies (not (and  (and ( < x 10) (and ( < ( * x 3 ) 0) ( (not ( =  x 55  ) )) ) ))) (not (and  (and ( < x 1000) (and ( < ( * x 3 ) 0) ( (not ( =  x 55  ) )) ) )))) )  
+     
+     (not (implies (not (and  ( < x 10 ))) (not (and  (and ( < x 1000) ( = x 55 ) )))) )  
+     
+     
+     (not (implies (not (and  ( < x 10 ))) (not (and  (and ( < x 1000) (and ( < ( * x 3 ) 0) ( (not ( =  x 55  ) )) ) )))) ) )
+)

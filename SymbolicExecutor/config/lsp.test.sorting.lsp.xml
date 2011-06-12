@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sut>
+	<testsuite name="lsp.test.sorting.lsp">
+		<testcase name="lsp.tests.LSPCheckerGeneratedTestSORTING">
+			<classes>
+				<class name="lsp.test.sorting.BubblesortAlgorithm">
+					<method name="&lt;init&gt;()" />
+					<method name="sort(sym)" />
+				</class>
+				<class name="lsp.test.sorting.BasicSortingAlgorithm">
+					<method name="&lt;init&gt;()" />
+					<method name="sort(sym)" />
+				</class>
+				<class name="lsp.test.sorting.IncorrectSortingAlgorithm">
+					<method name="&lt;init&gt;()" />
+					<method name="sort(sym)" />
+				</class>
+				<class name="lsp.test.sorting.SortingTest">
+					<method name="doWork(sym)" />
+					<method name="&lt;init&gt;()" />
+					<method name="mainLSPChecker(sym)" />
+				</class>
+				<class name="lsp.test.sorting.ISort">
+					<method name="sort(sym)" />
+				</class>
+			</classes>
+			<mainclass name="lsp.tests.LSPCheckerGeneratedTestSORTING" />
+		</testcase>
+	</testsuite>
+</sut>

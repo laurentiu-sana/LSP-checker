@@ -1,0 +1,27 @@
+[Method summary]
+Symbolic values: x_1_SYMINT,y_2_SYMINT
+
+<preconditions>
+</preconditions>
+
+<postconditions>
+    <pathconditions>
+# = 1
+y_2_SYMINT[-9999] > x_1_SYMINT[-10000]
+SPC # = 0 # = 1
+y_2_SYMINT[-10000] <= x_1_SYMINT[-10000]
+SPC # = 0 
+    </pathconditions>
+    <testcases>
+
+invariants(-10000,-9999)  --> 0
+invariants(-10000,-10000)  --> 0
+    </testcases>
+</postconditions>
+
+<invariants>
+Class: lsp.jpf.test.InvariantsSubClass
+    lsp.jpf.test.InvariantsSubClass.isSet
+    lsp.jpf.test.InvariantsSubClass.instanceOk
+    lsp.jpf.test.InvariantsSubClass.getMember
+</invariants>

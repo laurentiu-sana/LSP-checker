@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sut>
+	<testsuite name="lsp.test.numeric.lsp">
+		<testcase name="lsp.tests.LSPCheckerGeneratedTestNUMERIC">
+			<classes>
+				<class name="lsp.test.numeric.MyDouble">
+					<method name="&lt;init&gt;()" />
+					<method name="setValue(sym)" />
+					<method name="getValue()" />
+				</class>
+				<class name="lsp.test.numeric.NumericTest">
+					<method name="allocateArray(sym#sym#sym#sym)" />
+					<method name="doWork(sym)" />
+					<method name="doWork(sym)" />
+					<method name="&lt;init&gt;()" />
+					<method name="mainLSPChecker(sym)" />
+				</class>
+				<class name="lsp.test.numeric.MyInteger">
+					<method name="&lt;init&gt;()" />
+					<method name="setValue(sym)" />
+					<method name="getValue()" />
+				</class>
+			</classes>
+			<mainclass name="lsp.tests.LSPCheckerGeneratedTestNUMERIC" />
+		</testcase>
+	</testsuite>
+</sut>

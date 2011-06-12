@@ -1,0 +1,11 @@
+lsp.tests.LSPCheckerGeneratedTestPOSTCONDITIONS
+<lsp.test.postconditions.DummyPostcondition: int postcond9(lsp.test.postconditions.InterfacePostconditions,int)> scored 4.0
+<lsp.test.postconditions.DummyPostcondition: int postcond10(lsp.test.postconditions.SubClassPostconditions,int)> scored 2.0
+<lsp.test.postconditions.DummyPostcondition: void <init>()> scored 0.0
+<lsp.test.postconditions.SubClassPostconditions: void <init>()> scored 0.0
+<lsp.test.postconditions.SubClassPostconditions: int doWork(int)> scored 0.0
+<lsp.test.postconditions.InterfacePostconditions: int doWork(int)> scored 0.0
+<lsp.test.postconditions.NothingClassPostconditions: void <init>()> scored 0.0
+<lsp.test.postconditions.NothingClassPostconditions: int doWork(int)> scored 0.0
+<lsp.test.postconditions.SuperClassPostconditions: void <init>()> scored 0.0
+<lsp.test.postconditions.SuperClassPostconditions: int doWork(int)> scored 0.0

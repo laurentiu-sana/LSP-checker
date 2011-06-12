@@ -1,0 +1,18 @@
+sana@dell-desktop:~/Desktop/Diploma/workspace/SymbolicExecutor$ ./generated_scripts/run_lsp.test.constraints.BaseClass.postconditions.sh 
+symbolic.dp=choco
+Symbolic Execution Mode
+JavaPathfinder v4.1 - (C) 1999-2007 RIACS/NASA Ames Research Center
+
+
+====================================================== system under test
+application: lsp/test/constraints/BaseClass.java
+
+====================================================== search started: 21.05.2010 02:53
+
+***Execute symbolic INVOKEVIRTUAL: postconditions(I)I  ( x_1_SYMINT )  ( member )
+Path Condition: # = 1
+x_1_SYMINT[-10000] < CONST_0
+SPC # = 0
+Path Condition: # = 1
+x_1_SYMINT[0] >= CONST_0
+SPC # = 0

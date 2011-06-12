@@ -1,0 +1,103 @@
+Input: java binaries, compiled with "java -g" (command line) or debug = "on" (ant)
+Output: Reports, the format is not known; JUnit tests ready to run?
+
+Real list of TODOs:
+[15 - 08 - 2010]
+ * [OK] Get the unique test cases (solved with <cat file | sort | uniq>)
+ * [OK] Integrate the generated tests with the SymbolicExecutor module.
+
+[16 - 08 - 2010]
+ Gather and parse the results per class
+ 
+[17:19 - 08 - 2010] 
+ Warnings:
+ * Method contantiness
+ * Preconditions
+ * Postconditions
+ 
+[20 - 08 - 2010] 
+  Test cases of violation (each of above)
+
+[21 - 08 - 2010] 
+  Give suggestions to developers on how to change the system's design so as to
+prevent LSP violations 
+
+A) TODO:
+ 1. Generate assertions on the input and output of a method and on the
+invariants of a class.
+ - add basic mathematical constraints
+ - add heuristics
+
+ 
+=== HACKS ===
+
+1) Important hack for test generation and symbolic execution
+
+    When hitting an assert, the JPF backtracks the current state and tries to
+explore all the reachable states. If we have something as s1, s2, s3, s1, s2
+then the JPF will explore the same state multiple times. In our example, if an
+assert fails on s3, then s1 and s2 will be explored at least two times. So, we
+have to fragment our tests.
+
+    An example is in LSPCheckerGeneratedTestSTATEFUL1281907534638.java
+
+if (args.length == 0)
+    return;
+    	
+if (args[0].equals("0"))
+{
+    // Test case #0
+}
+else if (args[0].equals("1"))
+{
+    // Test case #1
+}
+
+    And we invoke the test via a bash script:
+
+lsp.tests.LSPCheckerGeneratedTestSTATEFUL1281907534638.sh
+
+for i in `seq 0 N`
+do
+    ../javapathfinder-trunk-svn/bin/jpf \
+        [.. paramters ..]
+        lsp.tests.LSPCheckerGeneratedTestSTATEFUL1281907534638 "$i"
+done
+
+    The Symbolic Executor will aggregate the data obtained in the running of
+the test cases.
+
+2) extensions/symbc/src/gov/nasa/jpf/symbc/bytecode/BytecodeUtils.java
+if (null != localVars){
+    localVarsIdx = (isStatic ? 0 : 1); // Skip over "this" argument when non-static
+}else{
+    argSize = 0;
+    //throw new RuntimeException("ERROR: you need to turn debug option on");
+}
+  Instead of throwing an exception, I set the argSize to 0; this will cause the
+not-calling of the method without debug symbols. The symbc extension should be
+recompiled by hand!
+
+
+0. Cum procesez un InputStream ? [stackoverflow question]
+
+Debug.getSolvedPC();
+System.err.println(JPF_gov_nasa_jpf_symbc_Debug.getPC(ti.getEnv()));
+JPF_gov_nasa_jpf_symbc_Debug.printSymbolicRef(env, objRef, objvRef, msgRef);
+JPF_gov_nasa_jpf_symbc_Debug.printPC(ti.getEnv(), 1, 2);
+JPF_gov_nasa_jpf_symbc_Debug.printSymbolicRef(ti.getEnv(), 1, 1, 2);
+
+1. Trace insert
+2. DEBUG to see what LSP is doing behind
+
+Known BUGS:
+
+* The LSP checker is built at top of the Symbolic Java PathFinder and inherits
+all its bugs
+
+* Multiple symbolic references does not work
+    multiplePreconditions(SuperClass cl1, SuperClass cl2, int x);
+    
+* Postconditions of virtual called method fails; currently, we generate main()
+methods with sequences of code that generates the report. We don't think it
+has a trivial fix because we are executing the code in the JPF virtual machine. 

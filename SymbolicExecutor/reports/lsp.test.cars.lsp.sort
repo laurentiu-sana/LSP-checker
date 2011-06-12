@@ -1,0 +1,16 @@
+lsp.tests.LSPCheckerGeneratedTestCARS
+<lsp.test.cars.CarsTest: java.lang.Object foo(java.lang.Object)> scored 6.0
+<lsp.test.cars.CarsTest: void speedUp(lsp.test.cars.Car,lsp.test.cars.BMW)> scored 5.0
+<lsp.test.cars.CarsTest: void bar(java.lang.Class)> scored 3.0
+<lsp.test.cars.BMWX5: void <init>()> scored 0.0
+<lsp.test.cars.BMWX5: java.lang.String sayYourName()> scored 0.0
+<lsp.test.cars.Dacia: void <init>()> scored 0.0
+<lsp.test.cars.Dacia: void setSpeed(int)> scored 0.0
+<lsp.test.cars.BMW: void <init>()> scored 0.0
+<lsp.test.cars.Car: void <init>()> scored 0.0
+<lsp.test.cars.Car: void setSpeed(int)> scored 0.0
+<lsp.test.cars.Car: int getSpeed()> scored 0.0
+<lsp.test.cars.Car: java.lang.String sayYourName()> scored 0.0
+<lsp.test.cars.Car: void <clinit>()> scored 0.0
+<lsp.test.cars.CarsTest: void <init>()> scored 0.0
+<lsp.test.cars.CarsTest: void mainLSPChecker(java.lang.String[])> scored 0.0

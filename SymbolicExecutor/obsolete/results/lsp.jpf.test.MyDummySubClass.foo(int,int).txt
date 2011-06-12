@@ -1,0 +1,3 @@
+Symbolic values: x_1_SYMINT,y_2_SYMINT
+foo(1,don't care)  --> (x_1_SYMINT * CONST_2)
+foo(-10000,don't care)  --> ((x_1_SYMINT * CONST_2) * CONST_2)

@@ -1,0 +1,13 @@
+lsp.tests.LSPCheckerGeneratedTestSAVADVANCED
+<lsp.test.savadvanced.Subclass: void precond(lsp.test.savadvanced.MyDummyInterface)> scored 2.0
+<lsp.test.savadvanced.Superclass: void precond(lsp.test.savadvanced.MyDummyInterface)> scored 2.0
+<lsp.test.savadvanced.MyDummyImplementation2: void <init>()> scored 0.0
+<lsp.test.savadvanced.MyDummyImplementation2: int doWork()> scored 0.0
+<lsp.test.savadvanced.MyDummyImplementation2: void check(int)> scored 0.0
+<lsp.test.savadvanced.MyDummyInterface: int doWork()> scored 0.0
+<lsp.test.savadvanced.MyDummyInterface: void check(int)> scored 0.0
+<lsp.test.savadvanced.MyDummyImplementation1: void <init>()> scored 0.0
+<lsp.test.savadvanced.MyDummyImplementation1: int doWork()> scored 0.0
+<lsp.test.savadvanced.MyDummyImplementation1: void check(int)> scored 0.0
+<lsp.test.savadvanced.Subclass: void <init>()> scored 0.0
+<lsp.test.savadvanced.Superclass: void <init>()> scored 0.0

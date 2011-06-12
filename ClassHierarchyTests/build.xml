@@ -1,0 +1,63 @@
+<project name="ClassesHierarchyTests" basedir="." default="main">
+	<property name="base.dir" value="." />
+	<property name="src.dir" value="src" />
+	<property name="build.dir" value="build" />
+	<property name="classes.dir" value="${build.dir}/classes" />
+	<property name="jar.dir" value="${build.dir}/jar" />
+
+    <property name="jpf.dir"                  value="../javapathfinder-trunk-svn" />
+    <property name="jpf.build.dir"            value="${jpf.dir}/build" />
+    <property name="jpf.build.env.dir"        value="${jpf.build.dir}/env" />
+    <property name="jpf.ext.dir"              value="${jpf.dir}/extensions" />
+    <property name="jpf.build.jpf.dir"        value="${jpf.build.dir}/jpf" />
+    <property name="build-tools.dir"          value="${jpf.dir}/build-tools" />
+    <property name="build-tools.lib.dir"      value="${build-tools.dir}/lib" />
+
+	<target name="clean">
+		<delete dir="${build.dir}" />
+	</target>
+
+    <path id="jpf.lib.path">
+        <!--  <fileset dir="${jpf.ext.dir}" includes="**/*.jar"/>-->
+        <path location="${jpf.build.dir}/env" />
+        <path location="${jpf.build.dir}/jpf" />
+        <path location="${jpf.build.dir}/symbc" />
+
+        <fileset dir="${jpf.ext.dir}">
+            <include name="**/${lib.dir}/*.jar"/>
+        </fileset>
+        <fileset dir="lib/">
+            <include name="**/*.jar"/>
+        </fileset>
+    </path>
+
+
+    <path id="myclasspath">
+        <!-- JPF specific information included -->
+        <path refid="jpf.lib.path"/>
+        <pathelement path="${jpf.build.jpf.dir}"/>
+        <pathelement path="${jpf.build.test.dir}"/>
+        <pathelement path="${jpf.build.env.jvm.dir}"/>
+        <pathelement path="${jpf.build.env.jpf.dir}"/>
+    </path>
+
+
+	<target name="compile">
+		<mkdir dir="${classes.dir}" />
+        <javac srcdir="${src.dir}" destdir="${classes.dir}" classpathref="myclasspath" debug="on">
+            <compilerarg value="-Xlint"/>
+        </javac>
+	</target>
+
+	<target name="jar">
+		<mkdir dir="${jar.dir}" />
+		<jar destfile="${jar.dir}/${ant.project.name}.jar" basedir="${classes.dir}">
+			<manifest>
+				<attribute name="Main-Class" value="${main-class}" />
+			</manifest>
+		</jar>
+	</target>
+
+	<target name="main" depends="compile, jar" />
+
+</project>

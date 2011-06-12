@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sut>
+	<testsuite name="lsp.test.cars.lsp">
+		<testcase name="lsp.tests.LSPCheckerGeneratedTestCARS">
+			<classes>
+				<class name="lsp.test.cars.CarsTest">
+					<method name="foo(sym)" />
+					<method name="speedUp(sym#sym)" />
+					<method name="bar(sym)" />
+					<method name="&lt;init&gt;()" />
+					<method name="mainLSPChecker(sym)" />
+				</class>
+				<class name="lsp.test.cars.BMW">
+					<method name="&lt;init&gt;()" />
+				</class>
+				<class name="lsp.test.cars.BMWX5">
+					<method name="&lt;init&gt;()" />
+					<method name="sayYourName()" />
+				</class>
+				<class name="lsp.test.cars.Car">
+					<method name="&lt;init&gt;()" />
+					<method name="setSpeed(sym)" />
+					<method name="getSpeed()" />
+					<method name="sayYourName()" />
+					<method name="&lt;clinit&gt;()" />
+				</class>
+				<class name="lsp.test.cars.Dacia">
+					<method name="&lt;init&gt;()" />
+					<method name="setSpeed(sym)" />
+				</class>
+			</classes>
+			<mainclass name="lsp.tests.LSPCheckerGeneratedTestCARS" />
+		</testcase>
+	</testsuite>
+</sut>

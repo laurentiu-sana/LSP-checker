@@ -1,0 +1,15 @@
+sana@dell-desktop:~/Desktop/Diploma/workspace/SymbolicExecutor$ ./generated_scripts/run_lsp.test.constraints.BaseClass.preconditions.sh 
+symbolic.dp=choco
+Symbolic Execution Mode
+JavaPathfinder v4.1 - (C) 1999-2007 RIACS/NASA Ames Research Center
+
+
+====================================================== system under test
+application: lsp/test/constraints/BaseClass.java
+
+====================================================== search started: 21.05.2010 02:54
+
+***Execute symbolic INVOKEVIRTUAL: preconditions(I)I  ( x_1_SYMINT )  ( member )
+Path Condition: # = 0
+SPC # = 0
+

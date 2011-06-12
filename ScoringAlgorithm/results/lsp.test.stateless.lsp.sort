@@ -1,0 +1,20 @@
+lsp.tests.LSPCheckerGeneratedTestSTATELESS
+<lsp.test.stateless.DummySubClass: void <init>()> scored 0.0
+<lsp.test.stateless.DummySubClass: int preconditions(int)> scored 0.0
+<lsp.test.stateless.DummySubClass: int postconditions(int,int)> scored 0.0
+<lsp.test.stateless.DummySubClass: int invariants(int)> scored 0.0
+<lsp.test.stateless.DummySubClass: boolean isSet()> scored 0.0
+<lsp.test.stateless.DummySubClass: int getMember()> scored 0.0
+<lsp.test.stateless.DummySubClass: boolean isSetFake()> scored 0.0
+<lsp.test.stateless.DummySubClass: void mainLSPChecker2(java.lang.String[])> scored 0.0
+<lsp.test.stateless.DummySubClass: void mainLSPChecker(java.lang.String[])> scored 0.0
+<lsp.test.stateless.DummySuperClass: void <init>()> scored 0.0
+<lsp.test.stateless.DummySuperClass: int preconditions(int)> scored 0.0
+<lsp.test.stateless.DummySuperClass: int postconditions(int,int)> scored 0.0
+<lsp.test.stateless.DummySuperClass: int invariants(int)> scored 0.0
+<lsp.test.stateless.DummySuperClass: boolean isSet()> scored 0.0
+<lsp.test.stateless.DummySuperClass: int getMember()> scored 0.0
+<lsp.test.stateless.DummySuperClass: boolean isSetFake()> scored 0.0
+<lsp.test.stateless.DummySuperClass: void mainLSPChecker2(java.lang.String[])> scored 0.0
+<lsp.test.stateless.DummySuperClass: void mainLSPChecker(java.lang.String[])> scored 0.0
+<lsp.test.stateless.DummySuperClass: void <clinit>()> scored 0.0

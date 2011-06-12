@@ -1,0 +1,145 @@
+Generating report for the entry point lsp.tests.LSPCheckerGeneratedTestACCOUNTS.main
+
+###### 1. Method summary [lsp.test.accounts.OrdinaryAccount.open()]
+1.0. Symbolic return: V
+1.1. Symbolic values: 
+1.2. Preconditions
+1.2.1 Preconditions from virtual methods
+1.3. Postconditions
+1.3.1 Path conditions
+
+
+1.3.2 Generated test cases
+open() 
+
+
+###### 2. Method summary [lsp.test.accounts.OrdinaryAccount.close()]
+2.0. Symbolic return: V
+2.1. Symbolic values: 
+2.2. Preconditions
+2.2.1 Preconditions from virtual methods
+2.3. Postconditions
+2.3.1 Path conditions
+
+
+2.3.2 Generated test cases
+close() 
+
+
+###### 3. Method summary [lsp.test.accounts.AccountsTest.test(lsp.test.accounts.IAccount,int)]
+3.0. Symbolic return: V
+3.1. Symbolic values: account_32_SYMREF,x_33_SYMINT
+3.2. Preconditions
+3.2.1 Preconditions from virtual methods
+(and obj_instanceof_lsp_test_accounts_PlatinumAccount (and ( < input.sum 100) ( == assertion_disabled 0 ) ))||||Assert failed
+(and obj_instanceof_lsp_test_accounts_PlatinumAccount (and ( < x 100) ( == assertion_disabled 0 ) ))||||Assert failed
+3.3. Postconditions
+3.3.1 Path conditions
+(and parameter instanceof lsp.test.accounts.PlatinumAccount (and ( == assertion_disabled 0) (and ( >= x 100) ( == assertion_disabled 0 ) ) ) )
+(and parameter instanceof lsp.test.accounts.OrdinaryAccount ( == assertion_disabled 0 ) )
+(and parameter instanceof lsp.test.accounts.PlatinumAccount ( != assertion_disabled 0 ) )
+(and parameter instanceof lsp.test.accounts.PlatinumAccount (and ( != assertion_disabled 0) (and ( >= x 100) ( == assertion_disabled 0 ) ) ) )
+(and parameter instanceof lsp.test.accounts.PlatinumAccount (and ( == assertion_disabled 0) ( != assertion_disabled 0 ) ) )
+(and parameter instanceof lsp.test.accounts.AccountsTest (and ( != assertion_disabled 0) ( != assertion_disabled 0 ) ) )
+
+3.3.2 Generated test cases
+test(don't care,don't care) 
+
+
+###### 4. Method summary [lsp.test.accounts.PlatinumAccount.open()]
+4.0. Symbolic return: V
+4.1. Symbolic values: 
+4.2. Preconditions
+4.2.1 Preconditions from virtual methods
+4.3. Postconditions
+4.3.1 Path conditions
+
+
+4.3.2 Generated test cases
+open() 
+
+
+###### 5. Method summary [lsp.test.accounts.PlatinumAccount.close()]
+5.0. Symbolic return: V
+5.1. Symbolic values: 
+5.2. Preconditions
+(and  (and ( < input.sum 100) ( == assertion_disabled 0 ) ))||||Assert failed
+(and  (and ( < x 100) ( == assertion_disabled 0 ) ))||||Assert failed
+5.2.1 Preconditions from virtual methods
+5.3. Postconditions
+5.3.1 Path conditions
+(and ( >= input.sum 100) ( == assertion_disabled 0 ) )
+(and ( >= x 100) ( == assertion_disabled 0 ) )
+( != assertion_disabled 0 )
+
+5.3.2 Generated test cases
+close() 
+
+
+###### 6. Method summary [lsp.test.accounts.OrdinaryAccount.setDeposit(int)]
+6.0. Symbolic return: V
+6.1. Symbolic values: sum_27_SYMINT
+6.2. Preconditions
+6.2.1 Preconditions from virtual methods
+6.3. Postconditions
+6.3.1 Path conditions
+(and parameter instanceof lsp.test.accounts.AccountsTest )
+(and parameter instanceof lsp.test.accounts.OrdinaryAccount )
+
+6.3.2 Generated test cases
+setDeposit(don't care) 
+
+
+###### 7. Method summary [lsp.test.accounts.OrdinaryAccount.isOpen()]
+7.0. Symbolic return: Z
+7.1. Symbolic values: 
+7.2. Preconditions
+7.2.1 Preconditions from virtual methods
+7.3. Postconditions
+7.3.1 Path conditions
+||||input.isOpen
+( == assertion_disabled 0 )||||0
+
+7.3.2 Generated test cases
+isOpen() input.isOpen
+
+isOpen() 0
+
+
+###### 8. Method summary [lsp.test.accounts.PlatinumAccount.isOpen()]
+8.0. Symbolic return: Z
+8.1. Symbolic values: 
+8.2. Preconditions
+8.2.1 Preconditions from virtual methods
+8.3. Postconditions
+8.3.1 Path conditions
+(and ( == assertion_disabled 0) (and ( >= x 100) ( == assertion_disabled 0 ) ) )||||0
+||||input.isOpen
+(and ( == assertion_disabled 0) ( != assertion_disabled 0 ) )||||0
+
+8.3.2 Generated test cases
+isOpen() 0
+
+isOpen() input.isOpen
+
+
+###### 9. Method summary [lsp.test.accounts.PlatinumAccount.setDeposit(int)]
+9.0. Symbolic return: V
+9.1. Symbolic values: x_19_SYMINT
+9.2. Preconditions
+9.2.1 Preconditions from virtual methods
+9.3. Postconditions
+9.3.1 Path conditions
+(and parameter instanceof lsp.test.accounts.PlatinumAccount )
+(and parameter instanceof lsp.test.accounts.AccountsTest )
+
+9.3.2 Generated test cases
+setDeposit(don't care) 
+
+
+###### Constant Methods
+lsp.test.accounts.OrdinaryAccount
+lsp.test.accounts.OrdinaryAccount.isOpen()Z
+lsp.test.accounts.PlatinumAccount
+lsp.test.accounts.PlatinumAccount.isOpen()Z
+lsp.test.accounts.AccountsTest

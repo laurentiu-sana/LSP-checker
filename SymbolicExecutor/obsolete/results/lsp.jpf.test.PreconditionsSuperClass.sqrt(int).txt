@@ -1,0 +1,9 @@
+Symbolic values: x_1_SYMINT
+
+sqrt(-10000)  --> 0
+sqrt(0)  --> 0
+
+= Preconditions =
+{}
+
+= Invariants =

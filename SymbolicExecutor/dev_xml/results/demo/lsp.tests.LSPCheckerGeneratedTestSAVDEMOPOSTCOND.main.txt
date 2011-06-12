@@ -1,0 +1,48 @@
+Generating report for the entry point lsp.tests.LSPCheckerGeneratedTestSAVDEMOPOSTCOND.main
+
+###### 1. Method summary [lsp.test.savdemopostcond.SuperClass.postcond(int)]
+1.0. Symbolic return: I
+1.1. Symbolic values: x_1_SYMINT
+1.2. Preconditions
+1.2.1 Preconditions from virtual methods
+1.3. Postconditions
+1.3.1 Path conditions
+(and parameter instanceof lsp.test.savdemopostcond.SuperClass ( < x 0 ) )||||( + ( - 0 x ) 1 )
+(and parameter instanceof lsp.test.savdemopostcond.SubClass ( >= x 0 ) )||||( + x 1 )
+
+1.3.2 Generated test cases
+postcond() ( + ( - 0 x ) 1 )
+
+postcond() ( + x 1 )
+
+
+###### 2. Method summary [lsp.test.savdemopostcond.SubClass.postcond(int)]
+2.0. Symbolic return: I
+2.1. Symbolic values: x_3_SYMINT
+2.2. Preconditions
+2.2.1 Preconditions from virtual methods
+2.3. Postconditions
+2.3.1 Path conditions
+(and parameter instanceof lsp.test.savdemopostcond.SubClass ( < x 0 ) )||||( - 0 x )
+(and parameter instanceof lsp.test.savdemopostcond.SubClass ( >= x 0 ) )||||x
+
+2.3.2 Generated test cases
+postcond(don't care) ( - 0 x )
+
+postcond(don't care) x
+
+postcond() ( - 0 x )
+
+postcond() x
+
+
+###### Constant Methods
+lsp.test.savdemopostcond.SuperClass
+lsp.test.savdemopostcond.SuperClass.postcond(I)I
+lsp.test.savdemopostcond.SuperClass.postcond1(I)I
+lsp.test.savdemopostcond.SuperClass.postcond2(II)I
+lsp.test.savdemopostcond.SuperClass.postcond3(II)I
+lsp.test.savdemopostcond.SuperClass.postcond9(Llsp/test/savdemopostcond/InterfacePostconditions;I)I
+lsp.test.savdemopostcond.SuperClass.postcond10(Llsp/test/savdemopostcond/SubClassPostconditions;I)I
+lsp.test.savdemopostcond.SubClass
+lsp.test.savdemopostcond.SubClass.postcond(I)I

@@ -1,0 +1,258 @@
+Generating report for the entry point lsp.tests.LSPCheckerGeneratedTestFEATURES.main
+
+###### 1. Method summary [lsp.test.features.MultiplePostconditionsSubclass.simpleInterfacePostconditions(lsp.test.features.MyInterface,int)]
+1.0. Symbolic return: I
+1.1. Symbolic values: obj_6305_SYMREF,x_6306_SYMINT
+1.2. Preconditions
+1.2.1 Preconditions from virtual methods
+1.3. Postconditions
+1.3.1 Path conditions
+parameter instanceof lsp.test.features.SuperClass||||( + ( * x 2 ) 1 )
+parameter instanceof lsp.test.features.SubClass||||( + ( * x x ) 1 )
+
+1.3.2 Generated test cases
+simpleInterfacePostconditions(don't care,don't care) ( + ( * x 2 ) 1 )
+
+simpleInterfacePostconditions(don't care,don't care) ( + ( * x x ) 1 )
+
+
+###### 2. Method summary [lsp.test.features.MultiplePostconditionsSubclass.simplePostconditions(lsp.test.features.SuperClass,int)]
+2.0. Symbolic return: I
+2.1. Symbolic values: cl_6291_SYMREF,x_6292_SYMINT
+2.2. Preconditions
+2.2.1 Preconditions from virtual methods
+2.3. Postconditions
+2.3.1 Path conditions
+parameter instanceof lsp.test.features.SuperClass && ( == x 55 )||||( * x 2 )
+parameter instanceof lsp.test.features.SubClass && ( == x 55 )||||( * x x )
+parameter instanceof lsp.test.features.SubClass && (and ( < ( * x 3 ) 0) ( != x 55 ) )||||( * x x )
+parameter instanceof lsp.test.features.SubClass && (and ( >= ( * x 3 ) 0) ( != x 55 ) )||||( * ( * x 3 ) ( * ( * x 3 ) ( * x 3 ) ) )
+parameter instanceof lsp.test.features.SuperClass && (and ( < ( * x 3 ) 0) ( != x 55 ) )||||( * x 2 )
+
+2.3.2 Generated test cases
+simplePostconditions(don't care,don't care) ( * x 2 )
+
+simplePostconditions(don't care,don't care) ( * x x )
+
+simplePostconditions(don't care,don't care) ( * ( * x 3 ) ( * ( * x 3 ) ( * x 3 ) ) )
+
+simplePostconditions(don't care) ( * x x )
+
+simplePostconditions(don't care) ( * ( * x 3 ) ( * ( * x 3 ) ( * x 3 ) ) )
+
+
+###### 3. Method summary [lsp.test.features.MultiplePreconditions.simpleInterfacePreconditions(lsp.test.features.MyInterface,int)]
+3.0. Symbolic return: V
+3.1. Symbolic values: obj_6253_SYMREF,x_6254_SYMINT
+3.2. Preconditions
+3.2.1 Preconditions from virtual methods
+(and obj_instanceof_lsp_test_features_SubClass ( < x 1000 ))||||Assert failed
+(and obj_instanceof_lsp_test_features_SubClass (and ( < x 1000) ( == x 55 ) ))||||Assert failed
+(and obj_instanceof_lsp_test_features_SubClass (and ( < x 1000) (and ( < ( * x 3 ) 0) ( != x 55 ) ) ))||||Assert failed
+(and obj_instanceof_lsp_test_features_SuperClass ( < x 10 ))||||Assert failed
+(and obj_instanceof_lsp_test_features_SuperClass (and ( < x 10) ( == x 55 ) ))||||Assert failed
+(and obj_instanceof_lsp_test_features_SuperClass (and ( < x 10) (and ( < ( * x 3 ) 0) ( != x 55 ) ) ))||||Assert failed
+3.3. Postconditions
+3.3.1 Path conditions
+parameter instanceof lsp.test.features.SuperClass && ( >= x 10 )
+parameter instanceof lsp.test.features.SubClass && ( >= x 1000 )
+
+3.3.2 Generated test cases
+simpleInterfacePreconditions(don't care,don't care) 
+
+simpleInterfacePreconditions(don't care) 
+
+
+###### 4. Method summary [lsp.test.features.DeepPreconditions.bar(int)]
+4.0. Symbolic return: I
+4.1. Symbolic values: x_5257_SYMINT
+4.2. Preconditions
+(and  (and ( < x 0) ( < x 10 ) ))||||Assert failed
+(and  ( < x 0 ))||||Assert failed
+4.2.1 Preconditions from virtual methods
+4.3. Postconditions
+4.3.1 Path conditions
+parameter instanceof lsp.test.features.DeepPreconditions && (and ( >= x 0) ( < x 10 ) )||||( - 0 x )
+parameter instanceof lsp.test.features.DeepPreconditions && ( >= x 0 )||||( - 0 x )
+
+4.3.2 Generated test cases
+bar(don't care) ( - 0 x )
+
+bar() ( - 0 x )
+
+
+###### 5. Method summary [lsp.test.features.MultiplePreconditions.simplePreconditions(lsp.test.features.SuperClass,int)]
+5.0. Symbolic return: V
+5.1. Symbolic values: cl_6135_SYMREF,x_6136_SYMINT
+5.2. Preconditions
+5.2.1 Preconditions from virtual methods
+(and obj_instanceof_lsp_test_features_SubClass ( < x 1000 ))||||Assert failed
+(and obj_instanceof_lsp_test_features_SubClass (and ( < x 1000) ( == x 55 ) ))||||Assert failed
+(and obj_instanceof_lsp_test_features_SubClass (and ( < x 1000) (and ( < ( * x 3 ) 0) ( != x 55 ) ) ))||||Assert failed
+(and obj_instanceof_lsp_test_features_SuperClass ( < x 10 ))||||Assert failed
+(and obj_instanceof_lsp_test_features_SuperClass (and ( < x 10) ( == x 55 ) ))||||Assert failed
+(and obj_instanceof_lsp_test_features_SuperClass (and ( < x 10) (and ( < ( * x 3 ) 0) ( != x 55 ) ) ))||||Assert failed
+5.3. Postconditions
+5.3.1 Path conditions
+parameter instanceof lsp.test.features.SuperClass && (and ( >= ( * x 3 ) 0) (and ( >= x 10) ( == x 55 ) ) )
+parameter instanceof lsp.test.features.SubClass && (and ( >= ( * x 3 ) 0) (and ( >= x 1000) ( == x 55 ) ) )
+parameter instanceof lsp.test.features.MultiplePostconditionsSubclass && (and ( >= x 1000) (and ( < ( * x 3 ) 0) ( != x 55 ) ) )
+parameter instanceof lsp.test.features.MultiplePostconditionsSubclass && (and ( >= ( * x 3 ) 0) ( != x 55 ) )
+parameter instanceof lsp.test.features.MultiplePostconditionsSubclass && (and ( >= x 10) (and ( < ( * x 3 ) 0) ( != x 55 ) ) )
+
+5.3.2 Generated test cases
+simplePreconditions(don't care,don't care) 
+
+simplePreconditions(don't care) 
+
+
+###### 6. Method summary [lsp.test.features.SubClass.preconditions(int)]
+6.0. Symbolic return: V
+6.1. Symbolic values: x_6254_SYMINT
+6.2. Preconditions
+(and  ( < x 1000 ))||||Assert failed
+(and  (and ( < x 1000) ( == x 55 ) ))||||Assert failed
+(and  (and ( < x 1000) (and ( < ( * x 3 ) 0) ( != x 55 ) ) ))||||Assert failed
+6.2.1 Preconditions from virtual methods
+6.3. Postconditions
+6.3.1 Path conditions
+parameter instanceof lsp.test.features.SubClass && ( >= x 1000 )
+parameter instanceof lsp.test.features.SubClass && (and ( >= x 1000) ( == x 55 ) )
+parameter instanceof lsp.test.features.SubClass && (and ( >= x 1000) (and ( < ( * x 3 ) 0) ( != x 55 ) ) )
+
+6.3.2 Generated test cases
+preconditions(don't care) 
+
+preconditions() 
+
+
+###### 7. Method summary [lsp.test.features.DeepPreconditions.foo(int)]
+7.0. Symbolic return: V
+7.1. Symbolic values: x_1_SYMINT
+7.2. Preconditions
+(and  (and ( >= ( - 0 x ) x) (and ( >= x 0) ( < x 10 ) ) ))||||Assert failed
+(and  (and ( < x 0) ( < x 10 ) ))||||Assert failed[inherited]
+(and  ( < x 0 ))||||Assert failed[inherited]
+7.2.1 Preconditions from virtual methods
+(and obj_instanceof_lsp_test_features_DeepPreconditions (and ( < x 0) ( < x 10 ) ))||||Assert failed
+(and obj_instanceof_lsp_test_features_DeepPreconditions ( < x 0 ))||||Assert failed
+7.3. Postconditions
+7.3.1 Path conditions
+parameter instanceof lsp.test.features.DeepPreconditions && (and ( < ( - 0 x ) x) (and ( >= x 0) ( < x 10 ) ) )
+parameter instanceof lsp.test.features.DeepPostconditions && ( >= x 10 )
+
+7.3.2 Generated test cases
+foo() 
+
+
+###### 8. Method summary [lsp.test.features.DeepPostconditions.bar(int)]
+8.0. Symbolic return: I
+8.1. Symbolic values: x_5258_SYMINT
+8.2. Preconditions
+8.2.1 Preconditions from virtual methods
+8.3. Postconditions
+8.3.1 Path conditions
+parameter instanceof lsp.test.features.DeepPostconditions && (and ( < x 10) ( < x 0 ) )||||( * x 3 )
+parameter instanceof lsp.test.features.DeepPostconditions && ( < x 10 )||||( * x 3 )
+parameter instanceof lsp.test.features.SubClass && ( >= x 10 )||||( * x 4 )
+parameter instanceof lsp.test.features.SubClass && (and ( >= x 10) ( < x 0 ) )||||( * x 4 )
+
+8.3.2 Generated test cases
+bar(don't care) ( * x 3 )
+
+bar(don't care) ( * x 4 )
+
+bar() ( * x 3 )
+
+bar() ( * x 4 )
+
+
+###### 9. Method summary [lsp.test.features.SuperClass.preconditions(int)]
+9.0. Symbolic return: V
+9.1. Symbolic values: x_6252_SYMINT
+9.2. Preconditions
+(and  ( < x 10 ))||||Assert failed
+(and  (and ( < x 10) ( == x 55 ) ))||||Assert failed
+(and  (and ( < x 10) (and ( < ( * x 3 ) 0) ( != x 55 ) ) ))||||Assert failed
+9.2.1 Preconditions from virtual methods
+9.3. Postconditions
+9.3.1 Path conditions
+parameter instanceof lsp.test.features.SuperClass && ( >= x 10 )
+parameter instanceof lsp.test.features.SuperClass && (and ( >= x 10) ( == x 55 ) )
+parameter instanceof lsp.test.features.SuperClass && (and ( >= x 10) (and ( < ( * x 3 ) 0) ( != x 55 ) ) )
+
+9.3.2 Generated test cases
+preconditions(don't care) 
+
+preconditions() 
+
+
+###### 10. Method summary [lsp.test.features.DeepPostconditions.foo(int)]
+10.0. Symbolic return: I
+10.1. Symbolic values: x_3155_SYMINT
+10.2. Preconditions
+10.2.1 Preconditions from virtual methods
+10.3. Postconditions
+10.3.1 Path conditions
+parameter instanceof lsp.test.features.DeepPostconditions && (and ( < x 10) ( < x 0 ) )||||( * x 3 )
+parameter instanceof lsp.test.features.SubClass && (and ( >= x 10) ( < x 0 ) )||||( * x 4 )
+parameter instanceof lsp.test.features.SubClass && ( >= x 0 )||||( * x 2 )
+
+10.3.2 Generated test cases
+foo(don't care) ( * x 3 )
+
+foo(don't care) ( * x 4 )
+
+foo(don't care) ( * x 2 )
+
+foo() ( * x 3 )
+
+foo() ( * x 4 )
+
+foo() ( * x 2 )
+
+
+###### 11. Method summary [lsp.test.features.SubClass.postconditions(int)]
+11.0. Symbolic return: I
+11.1. Symbolic values: x_6306_SYMINT
+11.2. Preconditions
+11.2.1 Preconditions from virtual methods
+11.3. Postconditions
+11.3.1 Path conditions
+parameter instanceof lsp.test.features.SubClass||||( * x x )
+parameter instanceof lsp.test.features.SubClass && ( == x 55 )||||( * x x )
+parameter instanceof lsp.test.features.SubClass && (and ( < ( * x 3 ) 0) ( != x 55 ) )||||( * x x )
+
+11.3.2 Generated test cases
+postconditions(don't care) ( * x x )
+
+
+###### 12. Method summary [lsp.test.features.SuperClass.postconditions(int)]
+12.0. Symbolic return: I
+12.1. Symbolic values: x_6304_SYMINT
+12.2. Preconditions
+12.2.1 Preconditions from virtual methods
+12.3. Postconditions
+12.3.1 Path conditions
+parameter instanceof lsp.test.features.SuperClass||||( * x 2 )
+parameter instanceof lsp.test.features.SuperClass && ( == x 55 )||||( * x 2 )
+parameter instanceof lsp.test.features.SuperClass && (and ( < ( * x 3 ) 0) ( != x 55 ) )||||( * x 2 )
+
+12.3.2 Generated test cases
+postconditions(don't care) ( * x 2 )
+
+
+###### Constant Methods
+lsp.test.features.DeepPostconditions
+lsp.test.features.DeepPostconditions.foo(I)I
+lsp.test.features.DeepPostconditions.bar(I)I
+lsp.test.features.DeepPreconditions
+lsp.test.features.DeepPreconditions.bar(I)I
+lsp.test.features.MultiplePostconditionsSubclass
+lsp.test.features.MultiplePostconditionsSubclass.simplePostconditions(Llsp/test/features/SuperClass;I)I
+lsp.test.features.MultiplePostconditionsSubclass.simpleInterfacePostconditions(Llsp/test/features/MyInterface;I)I
+lsp.test.features.MultiplePreconditions
+lsp.test.features.SubClass
+lsp.test.features.SubClass.postconditions(I)I
+lsp.test.features.SuperClass
+lsp.test.features.SuperClass.postconditions(I)I

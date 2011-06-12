@@ -1,0 +1,105 @@
+Tests for the Liskov Substitution Principle (LSP) checker.
+
+  This module contains various unit tests for our checker. Basically,
+it is a collection of tests used in various stages of the program.
+
+1. Accounts
+  This test contains a typical violation of the LSP.
+class Account { close() { m_open = false; } }
+class PlatinumAccount
+{
+	close ()
+	{
+		if (m_deposit < 1000)
+			throw new RuntimeException("Not enought money to close!");
+		m_open = false;
+	}
+}
+  The violation appears when you open/create new account, set the deposit and
+then try to close it:
+	void foo(Account acc)
+	{
+		acc.open();
+		acc.setDeposit(1);
+		acc.close();
+	}
+	foo(new Account()); // OK
+	foo(new PlatinumAccount()); // Runtime exception thrown
+
+2. Cars
+  The Cars test is very similar with Accounts; instead of deposit we have
+speed and closing the account is replaced with accelerating to a given speed.
+	void foo(Car car)
+	{
+		car.accelerate(250);
+	}
+	foo(new BMW()); // OK, the BMW cars are really fast
+	foo(new Dacia()); // Runtime exception, this car is not for races!
+
+3. Constraints
+  Internal tests used to develop the SymbolicExecutor module of the LSP checker.
+In our solution, we compute the preconditions and the postconditions of each
+declared public method. We use constraints to check their propagation in the
+final analyzing phase.
+
+4. Dummy, the Rectangle-Square problem
+  This is the very typical violation of the LSP.
+	void foo(Rectangle r)
+	{
+		int x = 10;
+		int y = 100;
+		r.setWidth(x);
+		r.setHeight(y);
+		r.getWidth() == x  ?
+		r.getHeight() == y ?
+	}
+	
+	foo(new Rectangle()); // OK
+	foo(new Square()); // No, because width == height
+	
+5. Features
+  Internal tests used to develop the SymbolicExecutor. It contains overloaded
+methods, generics, multiple preconditions/postconditions and others.
+
+6. Numeric
+  Internal tests used to develop the ScoringAlgorithm, in particular tests for
+multidimensional arrays, the references java.lang.Object and java.lang.Class.
+
+7. Sorting
+  Internal tests used to develop the ScoringAlgorithm and the tests generation
+module. It contains 2 correct and 1 wrong sorting algorithms; we intend to show
+that the LSP checker catches the following violation:
+	void foo(SortingAlgorithm sa)
+	{
+		sa.sort(data);
+		assert data.isSorted();
+	}
+	
+	foo(new QuickSort()); // OK
+	foo(new IncorrectSort()); // Our data is not sorted
+
+8. Stateless
+  Stateless classes are classes that contain methods without state (i.e. the
+preconditions/postconditions are not dependent on other objects).
+	int foo(int x)
+	{
+		if (x < 0)
+			throw new RuntimeException("Give me a positive number");
+		return x * x;
+	}
+	Preconditions: {x < 0}
+	Postconditions: {x >= 0 --> x * x}
+  The purpose of this test was to develop the initial version of the
+SymbolicExecutor. Also, it used to test new features, because its source
+code is quite simple.
+
+9. Stateful
+  Stateful classes contain methods with state; their result is influenced by
+the result of the interactions with other objects. This is the most generic case
+and approximated the real-world classes. Actually, the things are not that
+complicated as in JDK (see below), but it's a good starting point because the
+logs are readable ;-).
+
+=== Real-world code (mostly ported to the LSP checker) ===
+10. JDK
+  TODO

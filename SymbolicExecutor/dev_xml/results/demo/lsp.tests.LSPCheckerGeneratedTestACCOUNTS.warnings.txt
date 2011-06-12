@@ -1,0 +1,28 @@
+[WARNING] {different postconditions}
+    lsp.test.accounts.OrdinaryAccount vs lsp.test.accounts.PlatinumAccount :: isOpen
+    SUPERCLASS: 
+||||input.isOpen
+( == assertion_disabled 0 )||||0
+
+    SUBCLASS: 
+||||input.isOpen
+(and ( == assertion_disabled 0) ( != assertion_disabled 0 ) )||||0
+(and ( == assertion_disabled 0) (and ( >= x 100) ( == assertion_disabled 0 ) ) )||||0
+    Z3: 
+unsat
+[stderr] fixme:heap:HeapSetInformation (nil) 1 (nil) 0
+
+[WARNING] {different preconditions}
+    lsp.test.accounts.OrdinaryAccount vs lsp.test.accounts.PlatinumAccount :: close
+    SUPERCLASS: 
+false||||Assert failed
+
+    SUBCLASS: 
+(and  (and ( < input.member 100) ( == assertion_disabled 0 ) ))||||Assert failed
+(and  (and ( < input.sum 100) ( == assertion_disabled 0 ) ))||||Assert failed
+    Z3: 
+(define assertion_disabled 0)
+(define input.member 0)
+sat
+[stderr] fixme:heap:HeapSetInformation (nil) 1 (nil) 0
+

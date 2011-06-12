@@ -1,0 +1,14 @@
+sana@dell-desktop:~/Desktop/Diploma/workspace/SymbolicExecutor$ ./generated_scripts/run_lsp.test.constraints.SuperClass.invariants.sh 
+symbolic.dp=choco
+Symbolic Execution Mode
+JavaPathfinder v4.1 - (C) 1999-2007 RIACS/NASA Ames Research Center
+
+
+====================================================== system under test
+application: lsp/test/constraints/SuperClass.java
+
+====================================================== search started: 21.05.2010 02:57
+
+***Execute symbolic INVOKEVIRTUAL: invariants(I)V  ( x_1_SYMINT )  
+Path Condition: # = 0
+SPC # = 0

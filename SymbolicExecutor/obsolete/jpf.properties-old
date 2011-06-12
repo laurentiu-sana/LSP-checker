@@ -1,0 +1,36 @@
+# jpf.properties - the default mode property file that is
+# loaded on top of default.properties, and normally contains
+# special Search and Heuristic settings.
+
+
+# where are your apps? You can set this here to include your standard dirs
+# (don't forget to set sourcepath accordingly if you want error traces)
+vm.sourcepath=src
+
+vm.classpath=build/classes
+
+#search.class = gov.nasa.jpf.search.heuristic.HeuristicSearch
+#search.heuristic.class = gov.nasa.jpf.search.heuristic.BFSHeuristic
+# search.heuristic.comparator.class = gov.nasa.jpf.search.heuristic.DefaultComparator
+# search.min_free = 1M
+# search.error_path = error.xml
+
+#jpf.listener = gov.nasa.jpf.tools.SearchMonitor
+
+# search.print_errors = true
+
+# vm.por = true
+
+log.level=warning
+
+# a simple DoubleThresholdGenerator example
+#d0threshold.class = gov.nasa.jpf.jvm.choice.DoubleThresholdGenerator
+#d0threshold.threshold = 0.0
+#d0threshold.low = -1.0
+#d0threshold.high = 1.0
+
+# properties for overflow detection
+#vm.insn_factory.class = gov.nasa.jpf.jvm.AdditionalInstructionFactory
+#vm.bytecode.location = gov.nasa.jpf.jvm.bytecode.overflow
+#jpf.listener = gov.nasa.jpf.tools.SimpleOverflowDetector
+# end of properties for overflow detection

@@ -1,0 +1,109 @@
+A) Overview and context
+
+  The Scoring Algorithm is a module of the Liskov Substitution Principle (LSP)
+checker. It is used to analyze large code bases and focus on relevant points
+of the system under test (SUT). We believe that the relevant points are the
+methods with a high degree of polymorphism (i.e. how much the parameters types
+of method can vary) and we generate test cases for them.
+
+INPUT:
+  1. SUT, input/classes - where the system can find your SUT, java bytecode
+  compiled with debug symbols
+  2. lsp.properties - configuration file
+
+  Example:
+DEBUG=false
+DEBUG_FOLDER=log
+TESTS_CLASSPATH=input/classes
+OUTPUT_FOLDER=results
+GENERATED_TESTS_FOLDER=results
+THRESHOLD_SCORE=-1.0
+MAX_METHODS_NUMBER=0
+MAX_METHODS_TESTS=0
+TESTS_PACKAGE=lsp/tests
+
+  All the features are explained in the lsp.dummy.properties file.
+
+  3. sut-config.properties (not mandatory)
+  
+  We used the same base configuration (lsp.properties) for our SUTs and we
+override some properties in sut-config.properties.
+
+  Example for JDK:
+TEST_NAME=jdk
+REGEX=lsp\.test\.jdk\.util.*
+PACKAGE=lsp.test.jdk.util
+THRESHOLD_SCORE=100.0
+MAX_METHODS_NUMBER=0
+MAX_METHODS_TESTS=3
+
+  We generate test cases for all the methods (MAX_METHODS_NUMBER = 0), but we
+limit the number of test cases for 3.
+ 
+OUTPUT:
+  1. results/sut.lsp.sort (methods is descendent order of their
+  polymorphic degree)
+  [In this case, the package of the generated test cases is <lsp.tests>]
+  2. results/lsp/tests/sut-test-cases.java (generated test cases)
+  3. results/build/lsp/tests/sut-test-cases.class (compiled test cases, to be
+  used in the next step - symbolic execution of the code, SymbolicExecutor)
+
+B) How to use
+
+  Before using this module, you have to configure it:
+  1. Hack lsp.properties
+  2. If you have more SUTs to be tested, we highly recommend you to use the
+approach described above (lsp.properties + config/sut-config.properties)
+  3. Start a new ant job:
+  $ ant run -Dconfig.file=config/sut-config.properties
+  
+  This will load lsp.properties and config/sut-config.properties. In the next
+step it will invoke the scoring algorithm and finally the test cases will be
+generated.
+
+  4. Deploy the SUT and these results into the SymbolicExecutor:
+  $ ./deploy.sh
+
+C) Knows bugs:
+  1. You can generate various test cases for the same SUT and you can even
+write your own. Because of this, you have to manually add the information
+in the results/sut.lsp.sort file.
+
+For example, results/lsp.test.accounts.lsp.sort contained:
+
+lsp.test.accounts.PlatinumAccount,lsp.test.accounts.OrdinaryAccount,
+  lsp.test.accounts.AccountsTest,
+
+and we added by our generated test case. You can add other test cases with a
+comma(/) between their names.
+
+lsp.tests.LSPCheckerGeneratedTestACCOUNTS1281640787404
+ 
+  2. When analyzing large code bases, you should limit the analyzed methods
+and how many test cases should be generated.
+
+results/lsp/tests/LSPCheckerGeneratedTestJDK1281630840660.java:2868:
+	code too large for try statement
+try { new PriorityQueue(0).contains(new Object()); } catch(Exception e) { }
+
+For JDK, we used:
+MAX_METHODS_NUMBER=0   all the methods are analyzed
+MAX_METHODS_TESTS=3    not more then 3 cases are generated
+
+  3. For some cases, mostly large code bases, the tests generator outputs
+duplicate test cases:
+
+try{ new lsp.test.jdk.util.HashSet(null).remove(null); }catch(Exception e){}
+try{ new lsp.test.jdk.util.HashSet(0,0.0f).remove(null); }catch(Exception e){}
+try{ new lsp.test.jdk.util.HashSet(0).remove(null); }catch(Exception e){}
+try{ new lsp.test.jdk.util.HashSet().remove(new java.lang.Object()); }catch(Exception e){}
+try{ new lsp.test.jdk.util.HashSet(null).remove(null); }catch(Exception e){}
+try{ new lsp.test.jdk.util.HashSet(0,0.0f).remove(null); }catch(Exception e){}
+
+ but we think this is OK. Actually, we fixed with issue with sort and uniq
+ (shell scripting).
+
+How to compile and deploy the generated tests:
+  $ ant compile-tests -Dg.tests.dir=results -Dg.results.dir=results/build
+  $ ./deploy.sh
+
